@@ -1,0 +1,731 @@
+2026-05-28 15:47:39 [INFO] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 15:47:43 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 15:48:05 [WARNING] Attempt 1 failed: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff723347de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff723347e50+14900]
+	chromedriver!(No symbol) [0x7ff7230ad5ad]
+	chromedriver!(No symbol) [0x7ff723107822]
+	chromedriver!(No symbol) [0x7ff723107b2c]
+	chromedriver!(No symbol) [0x7ff723157d17]
+	chromedriver!(No symbol) [0x7ff72315486f]
+	chromedriver!(No symbol) [0x7ff7230f9df8]
+	chromedriver!(No symbol) [0x7ff7230face3]
+	chromedriver!GetHandleVerifier [0x7ff72365cc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff723657375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff72367bc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff723366045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff72336ecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff723351bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff723351d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff7233360e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7ffc48d5e957+17]
+	ntdll!RtlUserThreadStart [0x7ffc4990427c+2c]
+
+2026-05-28 15:48:08 [INFO] Loading URL (attempt 2): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 15:48:28 [WARNING] Attempt 2 failed: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff723347de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff723347e50+14900]
+	chromedriver!(No symbol) [0x7ff7230ad5ad]
+	chromedriver!(No symbol) [0x7ff723107822]
+	chromedriver!(No symbol) [0x7ff723107b2c]
+	chromedriver!(No symbol) [0x7ff723157d17]
+	chromedriver!(No symbol) [0x7ff72315486f]
+	chromedriver!(No symbol) [0x7ff7230f9df8]
+	chromedriver!(No symbol) [0x7ff7230face3]
+	chromedriver!GetHandleVerifier [0x7ff72365cc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff723657375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff72367bc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff723366045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff72336ecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff723351bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff723351d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff7233360e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7ffc48d5e957+17]
+	ntdll!RtlUserThreadStart [0x7ffc4990427c+2c]
+
+2026-05-28 15:48:31 [INFO] Loading URL (attempt 3): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 15:48:52 [WARNING] Attempt 3 failed: Message: 
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff723347de5+14895]
+	chromedriver!GetHandleVerifier [0x7ff723347e50+14900]
+	chromedriver!(No symbol) [0x7ff7230ad5ad]
+	chromedriver!(No symbol) [0x7ff723107822]
+	chromedriver!(No symbol) [0x7ff723107b2c]
+	chromedriver!(No symbol) [0x7ff723157d17]
+	chromedriver!(No symbol) [0x7ff72315486f]
+	chromedriver!(No symbol) [0x7ff7230f9df8]
+	chromedriver!(No symbol) [0x7ff7230face3]
+	chromedriver!GetHandleVerifier [0x7ff72365cc49+3296f9]
+	chromedriver!GetHandleVerifier [0x7ff723657375+323e25]
+	chromedriver!GetHandleVerifier [0x7ff72367bc82+348732]
+	chromedriver!GetHandleVerifier [0x7ff723366045+32af5]
+	chromedriver!GetHandleVerifier [0x7ff72336ecec+3b79c]
+	chromedriver!GetHandleVerifier [0x7ff723351bc4+1e674]
+	chromedriver!GetHandleVerifier [0x7ff723351d54+1e804]
+	chromedriver!GetHandleVerifier [0x7ff7233360e7+2b97]
+	KERNEL32!BaseThreadInitThunk [0x7ffc48d5e957+17]
+	ntdll!RtlUserThreadStart [0x7ffc4990427c+2c]
+
+2026-05-28 15:48:55 [ERROR] Failed to load page after retries. Exiting.
+2026-05-28 15:48:57 [INFO] Browser closed.
+2026-05-28 15:52:29 [INFO] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 15:52:32 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 15:52:41 [INFO] Page loaded. Starting scroll...
+2026-05-28 15:52:43 [INFO] Reached end of page after 1 scrolls.
+2026-05-28 15:52:43 [INFO] Parsing HTML...
+2026-05-28 15:52:44 [INFO] Extracted 3 raw listings.
+2026-05-28 15:52:46 [INFO] Browser closed.
+2026-05-28 15:52:46 [INFO] Clean listings after dedup: 3
+2026-05-28 15:52:46 [INFO] CSV   saved → output\JLL_Hyderabad_offices_20260528_155246.csv
+2026-05-28 15:52:46 [INFO] Excel saved → output\JLL_Hyderabad_offices_20260528_155246.xlsx
+2026-05-28 15:58:11 [INFO] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 15:58:13 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 15:58:18 [INFO] Page loaded. Starting scroll...
+2026-05-28 15:58:21 [INFO] Reached end of page after 1 scrolls.
+2026-05-28 15:58:21 [INFO] Parsing HTML...
+2026-05-28 15:58:21 [INFO] Extracted 50 raw listings.
+2026-05-28 15:58:23 [INFO] Browser closed.
+2026-05-28 15:58:23 [INFO] Clean listings after dedup: 50
+2026-05-28 15:58:23 [INFO] CSV   saved → output\JLL_Hyderabad_offices_20260528_155823.csv
+2026-05-28 15:58:23 [INFO] Excel saved → output\JLL_Hyderabad_offices_20260528_155823.xlsx
+2026-05-28 16:12:17 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:12:19 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:12:25 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 16:12:28 [INFO] Reached end of page after 1 scrolls.
+2026-05-28 16:12:28 [INFO] [JLL] Parsing HTML...
+2026-05-28 16:12:28 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-28 16:12:30 [INFO] [JLL] Clean listings: 50
+2026-05-28 16:12:32 [INFO] [C&W] Scraping 1 Cushman & Wakefield listings...
+2026-05-28 16:12:33 [INFO] [C&W] Loading: https://www.cushmanwakefield.com/en/india/properties/for-lease/commercial/telangana/hyderabad/financial-district/eon-hyderabad-l
+2026-05-28 16:12:50 [INFO] [C&W] Scraped 1 listings.
+2026-05-28 16:12:51 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:12:53 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:12:59 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 16:13:01 [INFO] Reached end of page after 1 scrolls.
+2026-05-28 16:13:01 [INFO] [JLL] Parsing HTML...
+2026-05-28 16:13:02 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-28 16:13:04 [INFO] [JLL] Clean listings: 50
+2026-05-28 16:13:04 [INFO] [C&W] Scraping 1 Cushman & Wakefield listings...
+2026-05-28 16:13:06 [INFO] [C&W] Loading: https://www.cushmanwakefield.com/en/india/properties/for-lease/commercial/telangana/hyderabad/financial-district/eon-hyderabad-l
+2026-05-28 16:13:26 [INFO] [C&W] Scraped 1 listings.
+2026-05-28 16:13:26 [INFO] Combined: JLL=50, C&W=1, Total=51
+2026-05-28 16:13:27 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260528_161326.xlsx
+2026-05-28 16:13:27 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260528_161327.csv
+2026-05-28 16:16:32 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:16:34 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:17:04 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 16:17:07 [INFO] Reached end of page after 1 scrolls.
+2026-05-28 16:17:07 [INFO] [JLL] Parsing HTML...
+2026-05-28 16:17:07 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-28 16:17:10 [INFO] [JLL] Clean listings: 50
+2026-05-28 16:17:10 [INFO] [C&W] Scraping 1 Cushman & Wakefield listings...
+2026-05-28 16:17:11 [INFO] [C&W] Loading: https://www.cushmanwakefield.com/en/india/properties/for-lease/commercial/telangana/hyderabad/financial-district/eon-hyderabad-l
+2026-05-28 16:17:33 [INFO] [C&W] 1 listings ready.
+2026-05-28 16:17:33 [INFO] Combined: JLL=50, C&W=1, Total=51
+2026-05-28 16:17:34 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260528_161733.xlsx
+2026-05-28 16:17:34 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260528_161734.csv
+2026-05-28 16:18:19 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:18:21 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:18:27 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 16:18:30 [INFO] Reached end of page after 1 scrolls.
+2026-05-28 16:18:30 [INFO] [JLL] Parsing HTML...
+2026-05-28 16:18:30 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-28 16:18:32 [INFO] [JLL] Clean listings: 50
+2026-05-28 16:18:32 [INFO] [C&W] Scraping 1 Cushman & Wakefield listings...
+2026-05-28 16:18:34 [INFO] [C&W] Loading: https://www.cushmanwakefield.com/en/india/properties/for-lease/commercial/telangana/hyderabad/financial-district/eon-hyderabad-l
+2026-05-28 16:18:53 [INFO] [C&W] 1 listings ready.
+2026-05-28 16:18:54 [INFO] Combined: JLL=50, C&W=1, Total=51
+2026-05-28 16:18:54 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260528_161854.xlsx
+2026-05-28 16:18:54 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260528_161854.csv
+2026-05-28 16:23:06 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:23:08 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:23:14 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 16:23:17 [INFO] Reached end of page after 1 scrolls.
+2026-05-28 16:23:17 [INFO] [JLL] Parsing HTML...
+2026-05-28 16:23:17 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-28 16:23:19 [INFO] [JLL] Clean listings: 50
+2026-05-28 16:23:19 [INFO] [C&W] Loading static Cushman & Wakefield listings...
+2026-05-28 16:23:19 [INFO] [C&W] 1 listings ready.
+2026-05-28 16:23:19 [INFO] Combined: JLL=50, C&W=1, Total=51
+2026-05-28 16:23:20 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260528_162319.xlsx
+2026-05-28 16:23:20 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260528_162320.csv
+2026-05-28 16:28:51 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:28:53 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:28:59 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 16:29:02 [INFO] Reached end of page after 1 scrolls.
+2026-05-28 16:29:02 [INFO] [JLL] Parsing HTML...
+2026-05-28 16:29:02 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-28 16:29:04 [INFO] [JLL] Clean listings: 50
+2026-05-28 16:29:04 [INFO] [C&W] Loading static Cushman & Wakefield listings...
+2026-05-28 16:29:04 [INFO] [C&W] 1 listings ready.
+2026-05-28 16:29:56 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:29:57 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:30:03 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 16:30:05 [INFO] Reached end of page after 1 scrolls.
+2026-05-28 16:30:05 [INFO] [JLL] Parsing HTML...
+2026-05-28 16:30:06 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-28 16:30:08 [INFO] [JLL] Clean listings: 50
+2026-05-28 16:30:08 [INFO] [C&W] Loading static Cushman & Wakefield listings...
+2026-05-28 16:30:08 [INFO] [C&W] 1 listings ready.
+2026-05-28 16:30:08 [INFO] Combined: JLL=50, C&W=1, Total=48
+2026-05-28 16:30:09 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260528_163008.xlsx
+2026-05-28 16:30:09 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260528_163009.csv
+2026-05-28 16:38:16 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:38:18 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:38:23 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 16:38:26 [INFO] Reached end of page after 1 scrolls.
+2026-05-28 16:38:26 [INFO] [JLL] Parsing HTML...
+2026-05-28 16:38:26 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-28 16:38:29 [INFO] [JLL] Clean listings: 50
+2026-05-28 16:38:29 [INFO] [C&W] Loading static Cushman & Wakefield listings...
+2026-05-28 16:38:29 [INFO] [C&W] 1 listings ready.
+2026-05-28 16:38:29 [INFO] Combined: JLL=50, C&W=1, Total=48
+2026-05-28 16:38:29 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260528_163829.xlsx
+2026-05-28 16:38:29 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260528_163829.csv
+2026-05-28 16:43:43 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:43:45 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:43:51 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 16:43:53 [INFO] Reached end of page after 1 scrolls.
+2026-05-28 16:43:53 [INFO] [JLL] Parsing HTML...
+2026-05-28 16:43:53 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-28 16:43:56 [INFO] [JLL] Clean listings: 50
+2026-05-28 16:43:56 [INFO] [C&W] Loading static Cushman & Wakefield listings...
+2026-05-28 16:43:56 [INFO] [C&W] 1 listings ready.
+2026-05-28 16:43:56 [INFO] Combined: JLL=50, C&W=1, Total=48
+2026-05-28 16:43:56 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260528_164356.xlsx
+2026-05-28 16:43:56 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260528_164356.csv
+2026-05-28 16:46:52 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:46:54 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:46:59 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 16:47:02 [INFO] Reached end of page after 1 scrolls.
+2026-05-28 16:47:02 [INFO] [JLL] Parsing HTML...
+2026-05-28 16:47:02 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-28 16:47:04 [INFO] [JLL] Clean listings: 50
+2026-05-28 16:47:04 [INFO] [C&W] Loading static Cushman & Wakefield listings...
+2026-05-28 16:47:04 [INFO] [C&W] 1 listings ready.
+2026-05-28 16:47:04 [INFO] Combined: JLL=50, C&W=1, Total=48
+2026-05-28 16:47:05 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260528_164704.xlsx
+2026-05-28 16:47:05 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260528_164705.csv
+2026-05-28 16:49:30 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:49:32 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:49:37 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 16:49:40 [INFO] Reached end of page after 1 scrolls.
+2026-05-28 16:49:40 [INFO] [JLL] Parsing HTML...
+2026-05-28 16:49:40 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-28 16:49:42 [INFO] [JLL] Clean listings: 50
+2026-05-28 16:49:42 [INFO] [C&W] Loading static Cushman & Wakefield listings...
+2026-05-28 16:49:42 [INFO] [C&W] 1 listings ready.
+2026-05-28 16:49:42 [INFO] Combined: JLL=50, C&W=1, Total=47
+2026-05-28 16:49:43 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260528_164942.xlsx
+2026-05-28 16:49:43 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260528_164943.csv
+2026-05-28 16:53:53 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:53:55 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 16:54:00 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 16:54:03 [INFO] Reached end of page after 1 scrolls.
+2026-05-28 16:54:03 [INFO] [JLL] Parsing HTML...
+2026-05-28 16:54:03 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-28 16:54:05 [INFO] [JLL] Clean listings: 50
+2026-05-28 16:54:05 [INFO] [C&W] Loading static Cushman & Wakefield listings...
+2026-05-28 16:54:05 [INFO] [C&W] 1 listings ready.
+2026-05-28 16:54:05 [INFO] Combined: JLL=50, C&W=1, Total=47
+2026-05-28 16:54:06 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260528_165405.xlsx
+2026-05-28 16:54:06 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260528_165406.csv
+2026-05-28 17:44:46 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 17:44:48 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 17:44:53 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 17:44:56 [INFO] Reached end of page after 1 scrolls.
+2026-05-28 17:44:56 [INFO] [JLL] Parsing HTML...
+2026-05-28 17:44:56 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-28 17:44:58 [INFO] [JLL] Clean listings: 50
+2026-05-28 17:44:58 [INFO] [SY] Starting Square Yards Hyderabad scrape...
+2026-05-28 17:44:59 [INFO] [SY] Loading: https://www.squareyards.com/hyderabad-real-estate
+2026-05-28 17:45:09 [INFO] [SY] Scroll done after 2 scrolls.
+2026-05-28 17:45:09 [INFO] [SY] Extracted 11 raw listings.
+2026-05-28 17:45:11 [INFO] [SY] 11 listings ready.
+2026-05-28 17:45:11 [INFO] [C&W] Loading static Cushman & Wakefield listings...
+2026-05-28 17:45:11 [INFO] [C&W] 1 listings ready.
+2026-05-28 17:45:11 [INFO] Combined: JLL=50, C&W=1, SY=11, Total=58
+2026-05-28 17:45:12 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260528_174511.xlsx
+2026-05-28 17:45:12 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260528_174512.csv
+2026-05-28 17:48:18 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 17:48:19 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 17:48:25 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 17:48:27 [INFO] Reached end of page after 1 scrolls.
+2026-05-28 17:48:27 [INFO] [JLL] Parsing HTML...
+2026-05-28 17:48:27 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-28 17:48:30 [INFO] [JLL] Clean listings: 50
+2026-05-28 17:48:30 [INFO] [SY] Starting Square Yards Hyderabad scrape...
+2026-05-28 17:48:31 [INFO] [SY] Loading: https://www.squareyards.com/hyderabad-real-estate
+2026-05-28 17:48:46 [INFO] [SY] Scroll done after 2 scrolls.
+2026-05-28 17:48:46 [INFO] [SY] Extracted 11 raw listings.
+2026-05-28 17:48:48 [INFO] [SY] 11 listings ready.
+2026-05-28 17:48:48 [INFO] [C&W] Loading static Cushman & Wakefield listings...
+2026-05-28 17:48:48 [INFO] [C&W] 1 listings ready.
+2026-05-28 17:48:48 [INFO] Combined: JLL=50, C&W=1, SY=11, Total=57
+2026-05-28 17:48:49 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260528_174848.xlsx
+2026-05-28 17:48:49 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260528_174849.csv
+2026-05-28 17:57:29 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 17:57:30 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 17:57:36 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 17:57:38 [INFO] Reached end of page after 1 scrolls.
+2026-05-28 17:57:38 [INFO] [JLL] Parsing HTML...
+2026-05-28 17:57:38 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-28 17:57:40 [INFO] [JLL] Clean listings: 50
+2026-05-28 17:57:40 [INFO] [SY] Starting Square Yards Hyderabad scrape...
+2026-05-28 17:57:42 [INFO] [SY] Loading: https://www.squareyards.com/hyderabad-real-estate
+2026-05-28 17:57:56 [INFO] [SY] Scroll done after 2 scrolls.
+2026-05-28 17:57:57 [INFO] [SY] Found 11 listing cards. Fetching detail pages...
+2026-05-28 17:58:01 [DEBUG] [SY] 1/11 Prestige Golden Grove → 1169 Sq. Ft.
+2026-05-28 17:58:12 [INFO] [SY] Extracted 11 listings with details.
+2026-05-28 17:58:14 [INFO] [SY] 11 listings ready.
+2026-05-28 17:58:14 [INFO] [C&W] Loading static Cushman & Wakefield listings...
+2026-05-28 17:58:14 [INFO] [C&W] 1 listings ready.
+2026-05-28 17:58:14 [INFO] Combined: JLL=50, C&W=1, SY=11, Total=57
+2026-05-28 17:58:15 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260528_175814.xlsx
+2026-05-28 17:58:15 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260528_175815.csv
+2026-05-28 17:58:21 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 17:58:22 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 17:58:27 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 17:58:30 [INFO] Reached end of page after 1 scrolls.
+2026-05-28 17:58:30 [INFO] [JLL] Parsing HTML...
+2026-05-28 17:58:30 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-28 17:58:32 [INFO] [JLL] Clean listings: 50
+2026-05-28 17:58:32 [INFO] [SY] Starting Square Yards Hyderabad scrape...
+2026-05-28 17:58:34 [INFO] [SY] Loading: https://www.squareyards.com/hyderabad-real-estate
+2026-05-28 17:58:48 [INFO] [SY] Scroll done after 2 scrolls.
+2026-05-28 17:58:49 [INFO] [SY] Found 11 listing cards. Fetching detail pages...
+2026-05-28 17:58:54 [DEBUG] [SY] 1/11 Prestige Golden Grove → 1169 Sq. Ft.
+2026-05-28 17:59:05 [INFO] [SY] Extracted 11 listings with details.
+2026-05-28 17:59:07 [INFO] [SY] 11 listings ready.
+2026-05-28 17:59:07 [INFO] [C&W] Loading static Cushman & Wakefield listings...
+2026-05-28 17:59:07 [INFO] [C&W] 1 listings ready.
+2026-05-28 17:59:07 [INFO] Combined: JLL=50, C&W=1, SY=11, Total=57
+2026-05-28 17:59:08 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260528_175907.xlsx
+2026-05-28 17:59:08 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260528_175908.csv
+2026-05-28 18:03:10 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 18:03:11 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 18:03:16 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 18:03:19 [INFO] Reached end of page after 1 scrolls.
+2026-05-28 18:03:19 [INFO] [JLL] Parsing HTML...
+2026-05-28 18:03:19 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-28 18:03:21 [INFO] [JLL] Clean listings: 50
+2026-05-28 18:03:21 [INFO] [SY] Starting Square Yards Hyderabad scrape...
+2026-05-28 18:03:22 [INFO] [SY] Loading: https://www.squareyards.com/hyderabad-real-estate
+2026-05-28 18:03:37 [INFO] [SY] Scroll done after 2 scrolls.
+2026-05-28 18:03:37 [INFO] [SY] Found 23 listing cards. Fetching detail pages...
+2026-05-28 18:03:41 [DEBUG] [SY] 1/23 Prestige Golden Grove → 1169 
+                          
+                            to 3013 Sq. Ft
+2026-05-28 18:03:46 [DEBUG] [SY] 2/23 The Prestige City Hyderabad → 1179 
+                          
+                            to 3400 Sq. Ft
+2026-05-28 18:03:50 [DEBUG] [SY] 3/23 Godrej Regal Pavilion → 1352 
+                          
+                            to 3571 Sq. Ft
+2026-05-28 18:03:55 [DEBUG] [SY] 4/23 Brigade Enclave → 1868 
+                          
+                            to 2635 Sq. Ft
+2026-05-28 18:04:00 [DEBUG] [SY] 5/23 Prestige Spring Heights → 1571 
+                          
+                            to 3233 Sq. Ft
+2026-05-28 18:04:04 [DEBUG] [SY] 6/23 Prestige Golden Grove → 1169 
+                          
+                            to 3013 Sq. Ft
+2026-05-28 18:04:09 [DEBUG] [SY] 7/23 Brigade Gateway → 3067 
+                          
+                            to 9786 Sq. Ft
+2026-05-28 18:04:14 [DEBUG] [SY] 8/23 Godrej Madison Avenue → 2350 
+                          
+                            to 3600 Sq. Ft
+2026-05-28 18:04:18 [DEBUG] [SY] 9/23 Ramky One Odyssey → 1750 
+                          
+                            to 3020 Sq. Ft
+2026-05-28 18:04:23 [DEBUG] [SY] 10/23 Prestige Clairemont → 2003 
+                          
+                            to 4037 Sq. Ft
+2026-05-28 18:04:28 [DEBUG] [SY] 11/23 The Prestige City Hyderabad → 1179 
+                          
+                            to 3400 Sq. Ft
+2026-05-28 18:04:33 [DEBUG] [SY] 12/23 Godrej Regal Pavilion → 1352 
+                          
+                            to 3571 Sq. Ft
+2026-05-28 18:04:37 [DEBUG] [SY] 13/23 Prestige Spring Heights → 1571 
+                          
+                            to 3233 Sq. Ft
+2026-05-28 18:04:42 [DEBUG] [SY] 14/23 Ramky The Eminent → 2290 
+                          
+                            to 4100 Sq. Ft
+2026-05-28 18:04:47 [DEBUG] [SY] 15/23 Ramky Signature Estates → 10634 
+                          
+                            to 11635 Sq. Ft
+2026-05-28 18:04:51 [DEBUG] [SY] 16/23 Aparna Kanopy Yellow Bells → 1294 
+                          
+                            to 1911 Sq. Ft
+2026-05-28 18:04:56 [DEBUG] [SY] 17/23 Aparna Synergy → 1251 
+                          
+                            to 2304 Sq. Ft
+2026-05-28 18:05:01 [DEBUG] [SY] 18/23 Aparna Serenity → 1335 
+                          
+                            to 2730 Sq. Ft
+2026-05-28 18:05:05 [DEBUG] [SY] 19/23 Aparna Kanopy Marigold → 1525 
+                          
+                            to 1930 Sq. Ft
+2026-05-28 18:05:10 [DEBUG] [SY] 20/23 Brigade Enclave → 1868 
+                          
+                            to 2635 Sq. Ft
+2026-05-28 18:05:15 [DEBUG] [SY] 21/23 Kalpataru Avante → 1450 
+                          
+                            to 2501 Sq. Ft
+2026-05-28 18:05:19 [DEBUG] [SY] 22/23 Ramky One Genext Towers → 1310 
+                          
+                            to 1860 Sq. Ft
+2026-05-28 18:05:24 [DEBUG] [SY] 23/23 Ramky One Orion → 1265 
+                          
+                            to 1825 Sq. Ft
+2026-05-28 18:05:25 [INFO] [SY] Extracted 23 listings with details.
+2026-05-28 18:05:27 [INFO] [SY] 23 listings ready.
+2026-05-28 18:05:27 [INFO] [C&W] Loading static Cushman & Wakefield listings...
+2026-05-28 18:05:27 [INFO] [C&W] 1 listings ready.
+2026-05-28 18:05:27 [INFO] Combined: JLL=50, C&W=1, SY=23, Total=65
+2026-05-28 18:05:28 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260528_180527.xlsx
+2026-05-28 18:05:28 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260528_180528.csv
+2026-05-28 18:10:07 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 18:10:08 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 18:10:14 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 18:10:16 [INFO] Reached end of page after 1 scrolls.
+2026-05-28 18:10:16 [INFO] [JLL] Parsing HTML...
+2026-05-28 18:10:17 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-28 18:10:19 [INFO] [JLL] Clean listings: 50
+2026-05-28 18:10:19 [INFO] [SY] Starting Square Yards Hyderabad scrape...
+2026-05-28 18:10:20 [INFO] [SY] Loading: https://www.squareyards.com/hyderabad-real-estate
+2026-05-28 18:10:35 [INFO] [SY] Scroll done after 2 scrolls.
+2026-05-28 18:10:35 [INFO] [SY] Found 23 listing cards. Fetching detail pages...
+2026-05-28 18:10:39 [DEBUG] [SY] 1/23 Prestige Golden Grove → 3,013 Sq. Ft | Golden Grove Tellapur, Hyderabad
+2026-05-28 18:10:44 [DEBUG] [SY] 2/23 The Prestige City Hyderabad → 3,400 Sq. Ft | Prestige City, Hyderabad
+2026-05-28 18:10:48 [DEBUG] [SY] 3/23 Godrej Regal Pavilion → 3,571 Sq. Ft | Godrej Regal Pavilion
+                                             
+                                          Gaganpahad, Hyderabad
+2026-05-28 18:10:53 [DEBUG] [SY] 4/23 Brigade Enclave → 2,635 Sq. Ft | Brigade Enclave
+                                             
+                                          Erragadda, Hyderabad
+2026-05-28 18:10:58 [DEBUG] [SY] 5/23 Prestige Spring Heights → 3,233 Sq. Ft | Prestige Spring Heights
+                                             
+                                          Rajendra Nagar, Hyderabad
+2026-05-28 18:11:02 [DEBUG] [SY] 6/23 Prestige Golden Grove → 3,013 Sq. Ft | Golden Grove Tellapur, Hyderabad
+2026-05-28 18:11:07 [DEBUG] [SY] 7/23 Brigade Gateway → 9,786 Sq. Ft | Brigade Gateway
+                                             
+                                          Kokapet, Hyderabad
+2026-05-28 18:11:12 [DEBUG] [SY] 8/23 Godrej Madison Avenue → 3,600 Sq. Ft | Godrej Madison Avenue
+                                             
+                                          Kokapet, Hyderabad
+2026-05-28 18:11:17 [DEBUG] [SY] 9/23 Ramky One Odyssey → 3,020 Sq. Ft | Ramky One Odyssey
+                                             
+                                          Narsingi, Hyderabad
+2026-05-28 18:11:21 [DEBUG] [SY] 10/23 Prestige Clairemont → 4,037 Sq. Ft | Prestige Clairemont
+                                             
+                                          Kokapet, Hyderabad
+2026-05-28 18:11:26 [DEBUG] [SY] 11/23 The Prestige City Hyderabad → 3,400 Sq. Ft | Prestige City, Hyderabad
+2026-05-28 18:11:31 [DEBUG] [SY] 12/23 Godrej Regal Pavilion → 3,571 Sq. Ft | Godrej Regal Pavilion
+                                             
+                                          Gaganpahad, Hyderabad
+2026-05-28 18:11:35 [DEBUG] [SY] 13/23 Prestige Spring Heights → 3,233 Sq. Ft | Prestige Spring Heights
+                                             
+                                          Rajendra Nagar, Hyderabad
+2026-05-28 18:11:40 [DEBUG] [SY] 14/23 Ramky The Eminent → 4,100 Sq. Ft | Ramky The Eminent
+                                             
+                                          Gaganpahad, Hyderabad
+2026-05-28 18:11:44 [DEBUG] [SY] 15/23 Ramky Signature Estates → 11,635 Sq. Ft | Ramky Signature Estates
+                                             
+                                          Tukkuguda, Hyderabad
+2026-05-28 18:11:49 [DEBUG] [SY] 16/23 Aparna Kanopy Yellow Bells → 1,911 Sq. Ft | Aparna Kanopy Yellow Bells
+                                             
+                                          Kompally, Hyderabad
+2026-05-28 18:11:54 [DEBUG] [SY] 17/23 Aparna Synergy → 2,304 Sq. Ft | Aparna Synergy
+                                             
+                                          Gandi Maisamma, Hyderabad
+2026-05-28 18:11:59 [DEBUG] [SY] 18/23 Aparna Serenity → 2,730 Sq. Ft | Aparna Serenity
+                                             
+                                          Kompally, Hyderabad
+2026-05-28 18:12:03 [DEBUG] [SY] 19/23 Aparna Kanopy Marigold → 1,930 Sq. Ft | Aparna Kanopy Marigold
+                                             
+                                          Kompally, Hyderabad
+2026-05-28 18:12:08 [DEBUG] [SY] 20/23 Brigade Enclave → 2,635 Sq. Ft | Brigade Enclave
+                                             
+                                          Erragadda, Hyderabad
+2026-05-28 18:12:13 [DEBUG] [SY] 21/23 Kalpataru Avante → 2,501 Sq. Ft | Kalpataru Avante
+                                             
+                                          Sanath Nagar, Hyderabad
+2026-05-28 18:12:17 [DEBUG] [SY] 22/23 Ramky One Genext Towers → 1,860 Sq. Ft | Ramky One Genext Towers
+                                             
+                                          Uppal, Hyderabad
+2026-05-28 18:12:22 [DEBUG] [SY] 23/23 Ramky One Orion → 1,825 Sq. Ft | Ramky One Orion
+                                             
+                                          Pocharam, Hyderabad
+2026-05-28 18:12:23 [INFO] [SY] Extracted 23 listings with details.
+2026-05-28 18:12:25 [INFO] [SY] 23 listings ready.
+2026-05-28 18:12:25 [INFO] [C&W] Loading static Cushman & Wakefield listings...
+2026-05-28 18:12:25 [INFO] [C&W] 1 listings ready.
+2026-05-28 18:12:25 [INFO] Combined: JLL=50, C&W=1, SY=23, Total=65
+2026-05-28 18:12:26 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260528_181225.xlsx
+2026-05-28 18:12:26 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260528_181226.csv
+2026-05-28 18:16:48 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 18:16:49 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 18:16:56 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 18:16:59 [ERROR] [JLL] Unexpected error:
+Traceback (most recent call last):
+  File "C:\Users\MANDE SRIMAN\Downloads\web scrapping\scraper.py", line 298, in scrape_jll
+    scroll_to_bottom(driver, logger, max_scrolls=max_scrolls)
+  File "C:\Users\MANDE SRIMAN\Downloads\web scrapping\scraper.py", line 126, in scroll_to_bottom
+    _click_load_more(driver)
+NameError: name '_click_load_more' is not defined
+
+2026-05-28 18:17:01 [WARNING] [JLL] No listings found.
+2026-05-28 18:17:01 [INFO] [SY] Starting Square Yards Hyderabad commercial scrape...
+2026-05-28 18:17:02 [INFO] [SY] Loading: https://www.squareyards.com/rent/office-spaces-for-rent-in-hyderabad
+2026-05-28 18:17:45 [INFO] [SY] Scroll done after 5 scrolls for https://www.squareyards.com/rent/office-spaces-for-rent-in-hyderabad
+2026-05-28 18:17:45 [INFO] [SY] Found 0 cards from https://www.squareyards.com/rent/office-spaces-for-rent-in-hyderabad
+2026-05-28 18:17:45 [INFO] [SY] Loading: https://www.squareyards.com/sale/office-spaces-for-sale-in-hyderabad
+2026-05-28 18:18:24 [INFO] [SY] Scroll done after 5 scrolls for https://www.squareyards.com/sale/office-spaces-for-sale-in-hyderabad
+2026-05-28 18:18:25 [INFO] [SY] Found 0 cards from https://www.squareyards.com/sale/office-spaces-for-sale-in-hyderabad
+2026-05-28 18:18:25 [INFO] [SY] Loading: https://www.squareyards.com/rent/commercial-properties-for-rent-in-hyderabad
+2026-05-28 18:19:03 [INFO] [SY] Scroll done after 5 scrolls for https://www.squareyards.com/rent/commercial-properties-for-rent-in-hyderabad
+2026-05-28 18:19:04 [INFO] [SY] Found 0 cards from https://www.squareyards.com/rent/commercial-properties-for-rent-in-hyderabad
+2026-05-28 18:19:04 [INFO] [SY] Loading: https://www.squareyards.com/sale/commercial-properties-for-sale-in-hyderabad
+2026-05-28 18:19:30 [INFO] [SY] Scroll done after 3 scrolls for https://www.squareyards.com/sale/commercial-properties-for-sale-in-hyderabad
+2026-05-28 18:19:30 [INFO] [SY] Found 0 cards from https://www.squareyards.com/sale/commercial-properties-for-sale-in-hyderabad
+2026-05-28 18:19:32 [WARNING] [SY] No listings found.
+2026-05-28 18:19:32 [INFO] [C&W] Loading static Cushman & Wakefield listings...
+2026-05-28 18:19:32 [INFO] [C&W] 1 listings ready.
+2026-05-28 18:19:32 [INFO] Combined: JLL=0, C&W=1, SY=0, Total=1
+2026-05-28 18:19:33 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260528_181932.xlsx
+2026-05-28 18:19:33 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260528_181933.csv
+2026-05-28 18:20:53 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 18:20:54 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 18:20:59 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 18:21:05 [DEBUG] Scroll 1: height=7757px
+2026-05-28 18:21:11 [DEBUG] Scroll 2: height=7757px
+2026-05-28 18:21:14 [INFO] [JLL] Reached end of page after 3 scrolls.
+2026-05-28 18:21:14 [INFO] [JLL] Parsing HTML...
+2026-05-28 18:21:14 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-28 18:21:17 [INFO] [JLL] Clean listings: 50
+2026-05-28 18:21:17 [INFO] [SY] Starting Square Yards Hyderabad commercial scrape...
+2026-05-28 18:21:18 [INFO] [SY] Loading: https://www.squareyards.com/hyderabad-real-estate
+2026-05-28 18:21:45 [INFO] [SY] Scroll done after 4 scrolls for https://www.squareyards.com/hyderabad-real-estate
+2026-05-28 18:21:45 [INFO] [SY] Found 23 cards from https://www.squareyards.com/hyderabad-real-estate
+2026-05-28 18:21:49 [DEBUG] [SY] 1/23 Prestige Golden Grove → 3,013 Sq. Ft | Golden Grove Tellapur, Hyderabad
+2026-05-28 18:21:54 [DEBUG] [SY] 2/23 The Prestige City Hyderabad → 3,400 Sq. Ft | Prestige City, Hyderabad
+2026-05-28 18:21:58 [DEBUG] [SY] 3/23 Godrej Regal Pavilion → 3,571 Sq. Ft | Godrej Regal Pavilion
+                                             
+                                          Gaganpahad, Hyderabad
+2026-05-28 18:22:03 [DEBUG] [SY] 4/23 Brigade Enclave → 2,635 Sq. Ft | Brigade Enclave
+                                             
+                                          Erragadda, Hyderabad
+2026-05-28 18:22:08 [DEBUG] [SY] 5/23 Prestige Spring Heights → 3,233 Sq. Ft | Prestige Spring Heights
+                                             
+                                          Rajendra Nagar, Hyderabad
+2026-05-28 18:22:13 [DEBUG] [SY] 6/23 Prestige Golden Grove → 3,013 Sq. Ft | Golden Grove Tellapur, Hyderabad
+2026-05-28 18:22:17 [DEBUG] [SY] 7/23 Brigade Gateway → 9,786 Sq. Ft | Brigade Gateway
+                                             
+                                          Kokapet, Hyderabad
+2026-05-28 18:22:22 [DEBUG] [SY] 8/23 Godrej Madison Avenue → 3,600 Sq. Ft | Godrej Madison Avenue
+                                             
+                                          Kokapet, Hyderabad
+2026-05-28 18:22:27 [DEBUG] [SY] 9/23 Ramky One Odyssey → 3,020 Sq. Ft | Ramky One Odyssey
+                                             
+                                          Narsingi, Hyderabad
+2026-05-28 18:22:32 [DEBUG] [SY] 10/23 Prestige Clairemont → 4,037 Sq. Ft | Prestige Clairemont
+                                             
+                                          Kokapet, Hyderabad
+2026-05-28 18:22:36 [DEBUG] [SY] 11/23 The Prestige City Hyderabad → 3,400 Sq. Ft | Prestige City, Hyderabad
+2026-05-28 18:22:41 [DEBUG] [SY] 12/23 Godrej Regal Pavilion → 3,571 Sq. Ft | Godrej Regal Pavilion
+                                             
+                                          Gaganpahad, Hyderabad
+2026-05-28 18:22:46 [DEBUG] [SY] 13/23 Prestige Spring Heights → 3,233 Sq. Ft | Prestige Spring Heights
+                                             
+                                          Rajendra Nagar, Hyderabad
+2026-05-28 18:22:50 [DEBUG] [SY] 14/23 Ramky The Eminent → 4,100 Sq. Ft | Ramky The Eminent
+                                             
+                                          Gaganpahad, Hyderabad
+2026-05-28 18:22:55 [DEBUG] [SY] 15/23 Ramky Signature Estates → 11,635 Sq. Ft | Ramky Signature Estates
+                                             
+                                          Tukkuguda, Hyderabad
+2026-05-28 18:23:00 [DEBUG] [SY] 16/23 Aparna Kanopy Yellow Bells → 1,911 Sq. Ft | Aparna Kanopy Yellow Bells
+                                             
+                                          Kompally, Hyderabad
+2026-05-28 18:23:05 [DEBUG] [SY] 17/23 Aparna Synergy → 2,304 Sq. Ft | Aparna Synergy
+                                             
+                                          Gandi Maisamma, Hyderabad
+2026-05-28 18:23:09 [DEBUG] [SY] 18/23 Aparna Serenity → 2,730 Sq. Ft | Aparna Serenity
+                                             
+                                          Kompally, Hyderabad
+2026-05-28 18:23:14 [DEBUG] [SY] 19/23 Aparna Kanopy Marigold → 1,930 Sq. Ft | Aparna Kanopy Marigold
+                                             
+                                          Kompally, Hyderabad
+2026-05-28 18:23:19 [DEBUG] [SY] 20/23 Brigade Enclave → 2,635 Sq. Ft | Brigade Enclave
+                                             
+                                          Erragadda, Hyderabad
+2026-05-28 18:23:23 [DEBUG] [SY] 21/23 Kalpataru Avante → 2,501 Sq. Ft | Kalpataru Avante
+                                             
+                                          Sanath Nagar, Hyderabad
+2026-05-28 18:23:28 [DEBUG] [SY] 22/23 Ramky One Genext Towers → 1,860 Sq. Ft | Ramky One Genext Towers
+                                             
+                                          Uppal, Hyderabad
+2026-05-28 18:23:33 [DEBUG] [SY] 23/23 Ramky One Orion → 1,825 Sq. Ft | Ramky One Orion
+                                             
+                                          Pocharam, Hyderabad
+2026-05-28 18:23:36 [INFO] [SY] After commercial+Hyderabad filter: 1/23 listings kept.
+2026-05-28 18:23:36 [INFO] [SY] 1 final listings ready.
+2026-05-28 18:23:36 [INFO] [C&W] Loading static Cushman & Wakefield listings...
+2026-05-28 18:23:36 [INFO] [C&W] 1 listings ready.
+2026-05-28 18:23:36 [INFO] Combined: JLL=50, C&W=1, SY=1, Total=48
+2026-05-28 18:23:36 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260528_182336.xlsx
+2026-05-28 18:23:36 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260528_182336.csv
+2026-05-28 18:26:05 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 18:26:06 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 18:26:12 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 18:26:18 [DEBUG] Scroll 1: height=7757px
+2026-05-28 18:26:24 [DEBUG] Scroll 2: height=7757px
+2026-05-28 18:26:27 [INFO] [JLL] Reached end of page after 3 scrolls.
+2026-05-28 18:26:27 [INFO] [JLL] Parsing HTML...
+2026-05-28 18:26:27 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-28 18:26:29 [INFO] [JLL] Clean listings: 50
+2026-05-28 18:26:29 [INFO] [SY] Starting Square Yards Hyderabad commercial scrape...
+2026-05-28 18:26:31 [INFO] [SY] Loading: https://www.squareyards.com/hyderabad-real-estate
+2026-05-28 18:26:57 [INFO] [SY] Scroll done after 4 scrolls for https://www.squareyards.com/hyderabad-real-estate
+2026-05-28 18:26:58 [INFO] [SY] Found 23 cards from https://www.squareyards.com/hyderabad-real-estate
+2026-05-28 18:27:01 [DEBUG] [SY] 1/23 Prestige Golden Grove → 3,013 Sq. Ft | Golden Grove Tellapur, Hyderabad
+2026-05-28 18:27:06 [DEBUG] [SY] 2/23 The Prestige City Hyderabad → 3,400 Sq. Ft | Prestige City, Hyderabad
+2026-05-28 18:27:11 [DEBUG] [SY] 3/23 Godrej Regal Pavilion → 3,571 Sq. Ft | Godrej Regal Pavilion Gaganpahad, Hyderabad
+2026-05-28 18:27:16 [DEBUG] [SY] 4/23 Brigade Enclave → 2,635 Sq. Ft | Brigade Enclave Erragadda, Hyderabad
+2026-05-28 18:27:20 [DEBUG] [SY] 5/23 Prestige Spring Heights → 3,233 Sq. Ft | Prestige Spring Heights Rajendra Nagar, Hyderabad
+2026-05-28 18:27:25 [DEBUG] [SY] 6/23 Prestige Golden Grove → 3,013 Sq. Ft | Golden Grove Tellapur, Hyderabad
+2026-05-28 18:27:30 [DEBUG] [SY] 7/23 Brigade Gateway → 9,786 Sq. Ft | Brigade Gateway Kokapet, Hyderabad
+2026-05-28 18:27:35 [DEBUG] [SY] 8/23 Godrej Madison Avenue → 3,600 Sq. Ft | Godrej Madison Avenue Kokapet, Hyderabad
+2026-05-28 18:27:40 [DEBUG] [SY] 9/23 Ramky One Odyssey → 3,020 Sq. Ft | Ramky One Odyssey Narsingi, Hyderabad
+2026-05-28 18:27:45 [DEBUG] [SY] 10/23 Prestige Clairemont → 4,037 Sq. Ft | Prestige Clairemont Kokapet, Hyderabad
+2026-05-28 18:27:49 [DEBUG] [SY] 11/23 The Prestige City Hyderabad → 3,400 Sq. Ft | Prestige City, Hyderabad
+2026-05-28 18:27:54 [DEBUG] [SY] 12/23 Godrej Regal Pavilion → 3,571 Sq. Ft | Godrej Regal Pavilion Gaganpahad, Hyderabad
+2026-05-28 18:27:59 [DEBUG] [SY] 13/23 Prestige Spring Heights → 3,233 Sq. Ft | Prestige Spring Heights Rajendra Nagar, Hyderabad
+2026-05-28 18:28:03 [DEBUG] [SY] 14/23 Ramky The Eminent → 4,100 Sq. Ft | Ramky The Eminent Gaganpahad, Hyderabad
+2026-05-28 18:28:08 [DEBUG] [SY] 15/23 Ramky Signature Estates → 11,635 Sq. Ft | Ramky Signature Estates Tukkuguda, Hyderabad
+2026-05-28 18:28:13 [DEBUG] [SY] 16/23 Aparna Kanopy Yellow Bells → 1,911 Sq. Ft | Aparna Kanopy Yellow Bells Kompally, Hyderabad
+2026-05-28 18:28:17 [DEBUG] [SY] 17/23 Aparna Synergy → 2,304 Sq. Ft | Aparna Synergy Gandi Maisamma, Hyderabad
+2026-05-28 18:28:22 [DEBUG] [SY] 18/23 Aparna Serenity → 2,730 Sq. Ft | Aparna Serenity Kompally, Hyderabad
+2026-05-28 18:28:27 [DEBUG] [SY] 19/23 Aparna Kanopy Marigold → 1,930 Sq. Ft | Aparna Kanopy Marigold Kompally, Hyderabad
+2026-05-28 18:28:31 [DEBUG] [SY] 20/23 Brigade Enclave → 2,635 Sq. Ft | Brigade Enclave Erragadda, Hyderabad
+2026-05-28 18:28:36 [DEBUG] [SY] 21/23 Kalpataru Avante → 2,501 Sq. Ft | Kalpataru Avante Sanath Nagar, Hyderabad
+2026-05-28 18:28:41 [DEBUG] [SY] 22/23 Ramky One Genext Towers → 1,860 Sq. Ft | Ramky One Genext Towers Uppal, Hyderabad
+2026-05-28 18:28:46 [DEBUG] [SY] 23/23 Ramky One Orion → 1,825 Sq. Ft | Ramky One Orion Pocharam, Hyderabad
+2026-05-28 18:28:49 [INFO] [SY] After commercial filter: 5/23 listings kept.
+2026-05-28 18:28:49 [INFO] [SY] 4 final listings ready.
+2026-05-28 18:28:49 [INFO] [C&W] Loading static Cushman & Wakefield listings...
+2026-05-28 18:28:49 [INFO] [C&W] 1 listings ready.
+2026-05-28 18:28:49 [INFO] Combined: JLL=50, C&W=1, SY=4, Total=51
+2026-05-28 18:28:49 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260528_182849.xlsx
+2026-05-28 18:28:49 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260528_182849.csv
+2026-05-28 18:35:55 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 18:35:57 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-28 18:36:02 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-28 18:36:09 [DEBUG] Scroll 1: height=7757px
+2026-05-28 18:36:15 [DEBUG] Scroll 2: height=7757px
+2026-05-28 18:36:18 [INFO] [JLL] Reached end of page after 3 scrolls.
+2026-05-28 18:36:18 [INFO] [JLL] Parsing HTML...
+2026-05-28 18:36:18 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-28 18:36:20 [INFO] [JLL] Clean listings: 50
+2026-05-28 18:36:20 [INFO] [SY] Starting Square Yards Hyderabad commercial scrape...
+2026-05-28 18:36:21 [INFO] [SY] Loading: https://www.squareyards.com/sale/office-spaces-for-sale-in-hyderabad
+2026-05-28 18:37:00 [INFO] [SY] Scroll done after 5 scrolls for https://www.squareyards.com/sale/office-spaces-for-sale-in-hyderabad
+2026-05-28 18:37:00 [INFO] [SY] Found 25 cards from https://www.squareyards.com/sale/office-spaces-for-sale-in-hyderabad
+2026-05-28 18:37:04 [DEBUG] [SY] 1/25 Office Space for Sale in Kondapur, Hyderabad → 9,786 Sq. Ft | Kondapur, Hyderabad
+2026-05-28 18:37:10 [DEBUG] [SY] 2/25 Office Space for Sale in Financial District, Hyderabad → 3,013 Sq. Ft | Financial District, Hyderabad
+2026-05-28 18:37:15 [DEBUG] [SY] 3/25 Office Space for Sale in Ameerpet, Hyderabad → 2,635 Sq. Ft | Ameerpet, Hyderabad
+2026-05-28 18:37:21 [DEBUG] [SY] 4/25 Office Space for Sale in Banjara Hills, Hyderabad → 2,635 Sq. Ft | Banjara Hills, Hyderabad
+2026-05-28 18:37:26 [DEBUG] [SY] 5/25 Office Space for Sale in Kondapur, Hyderabad → 3,013 Sq. Ft | Kondapur, Hyderabad
+2026-05-28 18:37:32 [DEBUG] [SY] 6/25 Office Space for Sale in Banjara Hills, Hyderabad → 2,635 Sq. Ft | Banjara Hills, Hyderabad
+2026-05-28 18:37:37 [DEBUG] [SY] 7/25 Office Space for Sale in Nanakramguda, Hyderabad → 3,013 Sq. Ft | Nanakramguda, Hyderabad
+2026-05-28 18:37:42 [DEBUG] [SY] 8/25 Office Space for Sale in Rai Durg, Hyderabad → 8,001 Sq. Ft | Rai Durg, Hyderabad
+2026-05-28 18:37:47 [DEBUG] [SY] 9/25 Office Space for Sale in Madhapur, Hyderabad → 3,013 Sq. Ft | Madhapur, Hyderabad
+2026-05-28 18:37:52 [DEBUG] [SY] 10/25 Office Space for Sale in Abids, Hyderabad → 2,635 Sq. Ft | Abids, Hyderabad
+2026-05-28 18:37:57 [DEBUG] [SY] 11/25 Office Space for Sale in Jubilee Hills, Hyderabad → 2,635 Sq. Ft | Jubilee Hills, Hyderabad
+2026-05-28 18:38:02 [DEBUG] [SY] 12/25 Office Space for Sale in Nanakramguda, Hyderabad → 9,786 Sq. Ft | Nanakramguda, Hyderabad
+2026-05-28 18:38:09 [DEBUG] [SY] 13/25 Office Space for Sale in Madhapur, Hyderabad → 9,786 Sq. Ft | Madhapur, Hyderabad
+2026-05-28 18:38:14 [DEBUG] [SY] 14/25 Office Space for Sale in Gachibowli, Hyderabad → 9,786 Sq. Ft | Gachibowli, Hyderabad
+2026-05-28 18:38:20 [DEBUG] [SY] 15/25 Office Space for Sale in Kukatpally, Hyderabad → 9,786 Sq. Ft | Kukatpally, Hyderabad
+2026-05-28 18:38:25 [DEBUG] [SY] 16/25 Office Space for Sale in Nallagandla, Hyderabad → 1,855 Sq. Ft | Nallagandla, Hyderabad
+2026-05-28 18:38:30 [DEBUG] [SY] 17/25 Office Space for Sale in Ameerpet, Hyderabad → 2,635 Sq. Ft | Ameerpet, Hyderabad
+2026-05-28 18:38:35 [DEBUG] [SY] 18/25 Office Space for Sale in Lakdi Ka Pul, Hyderabad → 2,635 Sq. Ft | Lakdi Ka Pul, Hyderabad
+2026-05-28 18:38:40 [DEBUG] [SY] 19/25 Office Space for Sale in Hafeezpet, Hyderabad → 3,013 Sq. Ft | Hafeezpet, Hyderabad
+2026-05-28 18:38:45 [DEBUG] [SY] 20/25 Office Space for Sale in Begumpet, Hyderabad → 3,013 Sq. Ft | Begumpet, Hyderabad
+2026-05-28 18:38:52 [DEBUG] [SY] 21/25 Office Space for Sale in Neknampur, Hyderabad → 3,013 Sq. Ft | Neknampur, Hyderabad
+2026-05-28 18:39:00 [DEBUG] [SY] 22/25 Office Space for Sale in Jubilee Hills, Hyderabad → 2,635 Sq. Ft | Jubilee Hills, Hyderabad
+2026-05-28 18:39:05 [DEBUG] [SY] 23/25 Office Space for Sale in Banjara Hills, Hyderabad → 2,635 Sq. Ft | Banjara Hills, Hyderabad
+2026-05-28 18:39:10 [DEBUG] [SY] 24/25 Office Space for Sale in Jubilee Hills, Hyderabad → 2,635 Sq. Ft | Jubilee Hills, Hyderabad
+2026-05-28 18:39:15 [DEBUG] [SY] 25/25 Office Space for Sale in Hafeezpet, Hyderabad → 3,013 Sq. Ft | Hafeezpet, Hyderabad
+2026-05-28 18:39:16 [INFO] [SY] Loading: https://www.squareyards.com/rent/office-spaces-for-rent-in-hyderabad
+2026-05-28 18:39:58 [INFO] [SY] Scroll done after 5 scrolls for https://www.squareyards.com/rent/office-spaces-for-rent-in-hyderabad
+2026-05-28 18:39:58 [INFO] [SY] Found 25 cards from https://www.squareyards.com/rent/office-spaces-for-rent-in-hyderabad
+2026-05-28 18:40:02 [DEBUG] [SY] 1/25 Office Space for Rent in Banjara Hills, Hyderabad → 4,925 Sq. Ft | Banjara Hills, Hyderabad
+2026-05-28 18:40:07 [DEBUG] [SY] 2/25 Office Space for Rent in Begumpet, Hyderabad → 1,186 Sq. Ft | Begumpet, Hyderabad
+2026-05-28 18:40:12 [DEBUG] [SY] 3/25 Office Space for Rent in Hi Tech City, Hyderabad → 3,200 Sq. Ft | Hi Tech City, Hyderabad
+2026-05-28 18:40:17 [DEBUG] [SY] 4/25 Office Space for Rent in Kothaguda, Hyderabad → 2,150 Sq. Ft | Kothaguda, Hyderabad
+2026-05-28 18:40:22 [DEBUG] [SY] 5/25 Office Space for Rent in Financial District, Hyderabad → 15,400 Sq. Ft | Financial District, Hyderabad
+2026-05-28 18:40:28 [DEBUG] [SY] 6/25 Office Space for Rent in Kondapur, Hyderabad → 7,900 Sq. Ft | Kondapur, Hyderabad
+2026-05-28 18:40:33 [DEBUG] [SY] 7/25 Office Space for Rent in Mehdipatnam, Hyderabad → 2,000 Sq. Ft | Mehdipatnam, Hyderabad
+2026-05-28 18:40:38 [DEBUG] [SY] 8/25 Office Space for Rent in Somajiguda, Hyderabad → 5,500 Sq. Ft | Somajiguda, Hyderabad
+2026-05-28 18:40:43 [DEBUG] [SY] 9/25 Office Space for Rent in Begumpet, Hyderabad → 391 Sq. Ft | Begumpet, Hyderabad
+2026-05-28 18:40:49 [DEBUG] [SY] 10/25 Office Space for Rent in Jubilee Hills, Hyderabad → 4,000 Sq. Ft | Jubilee Hills, Hyderabad
+2026-05-28 18:40:55 [DEBUG] [SY] 11/25 Office Space for Rent in Banjara Hills, Hyderabad → 37,500 Sq. Ft | Banjara Hills, Hyderabad
+2026-05-28 18:41:00 [DEBUG] [SY] 12/25 Office Space for Rent in Gachibowli, Hyderabad → 3,300 Sq. Ft | Gachibowli, Hyderabad
+2026-05-28 18:41:05 [DEBUG] [SY] 13/25 Office Space for Rent in Madhapur, Hyderabad → 2,046 Sq. Ft | Madhapur, Hyderabad
+2026-05-28 18:41:10 [DEBUG] [SY] 14/25 Office Space for Rent in Madhapur, Hyderabad → 1,000 Sq. Ft | Madhapur, Hyderabad
+2026-05-28 18:41:15 [DEBUG] [SY] 15/25 Office Space for Rent in Kokapet, Hyderabad → 3,760 Sq. Ft | Kokapet, Hyderabad
+2026-05-28 18:41:20 [DEBUG] [SY] 16/25 Office Space for Rent in Beeramguda, Hyderabad → 1,250 Sq. Ft | Beeramguda, Hyderabad
+2026-05-28 18:41:26 [DEBUG] [SY] 17/25 Office Space for Rent in Madhapur, Hyderabad → 2,146 Sq. Ft | Madhapur, Hyderabad
+2026-05-28 18:41:34 [DEBUG] [SY] 18/25 Office Space for Rent in Gachibowli, Hyderabad → 2,800 Sq. Ft | Gachibowli, Hyderabad
+2026-05-28 18:41:39 [DEBUG] [SY] 19/25 Office Space for Rent in Nanakramguda, Hyderabad → 50,000 Sq. Ft | Nanakramguda, Hyderabad
+2026-05-28 18:41:45 [DEBUG] [SY] 20/25 Office Space for Rent in Masjid Banda, Hyderabad → 3,200 Sq. Ft | Masjid Banda, Hyderabad
+2026-05-28 18:41:51 [DEBUG] [SY] 21/25 Office Space for Rent in Puppalaguda, Hyderabad → 3,200 Sq. Ft | Puppalaguda, Hyderabad
+2026-05-28 18:41:56 [DEBUG] [SY] 22/25 Office Space for Rent in Madhapur, Hyderabad → 3,400 Sq. Ft | Madhapur, Hyderabad
+2026-05-28 18:42:01 [DEBUG] [SY] 23/25 Office Space for Rent in Khairatabad, Hyderabad → 2,000 Sq. Ft | Khairatabad, Hyderabad
+2026-05-28 18:42:06 [DEBUG] [SY] 24/25 Office Space for Rent in Kokapet, Hyderabad → 1,800 Sq. Ft | Kokapet, Hyderabad
+2026-05-28 18:42:11 [DEBUG] [SY] 25/25 Office Space for Rent in Madhapur, Hyderabad → 1,897 Sq. Ft | Madhapur, Hyderabad
+2026-05-28 18:42:12 [INFO] [SY] Loading: https://www.squareyards.com/rent/commercial-properties-for-rent-in-hyderabad
+2026-05-28 18:42:51 [INFO] [SY] Scroll done after 5 scrolls for https://www.squareyards.com/rent/commercial-properties-for-rent-in-hyderabad
+2026-05-28 18:42:51 [INFO] [SY] Found 25 cards from https://www.squareyards.com/rent/commercial-properties-for-rent-in-hyderabad
+2026-05-28 18:42:55 [DEBUG] [SY] 1/25 Office Space for Rent in Banjara Hills, Hyderabad → 4,925 Sq. Ft | Banjara Hills, Hyderabad
+2026-05-28 18:43:01 [DEBUG] [SY] 2/25 Office Space for Rent in Begumpet, Hyderabad → 538 Sq. Ft | Begumpet, Hyderabad
+2026-05-28 18:43:06 [DEBUG] [SY] 3/25 Office Space for Rent in Hi Tech City, Hyderabad → 3,200 Sq. Ft | Hi Tech City, Hyderabad
+2026-05-28 18:43:10 [DEBUG] [SY] 4/25 Office Space for Rent in Kothaguda, Hyderabad → 2,150 Sq. Ft | Kothaguda, Hyderabad
+2026-05-28 18:43:15 [DEBUG] [SY] 5/25 Office Space for Rent in Financial District, Hyderabad → 15,400 Sq. Ft | Financial District, Hyderabad
+2026-05-28 18:43:21 [DEBUG] [SY] 6/25 Office Space for Rent in Kokapet, Hyderabad → 17,000 Sq. Ft | Kokapet, Hyderabad
+2026-05-28 18:43:27 [DEBUG] [SY] 7/25 Showroom for Rent in Sri Nagar Colony, Hyderabad → 4,500 Sq. Ft | Sri Nagar Colony, Hyderabad
+2026-05-28 18:43:31 [DEBUG] [SY] 8/25 Office Space for Rent in Somajiguda, Hyderabad → 5,500 Sq. Ft | Somajiguda, Hyderabad
+2026-05-28 18:43:36 [DEBUG] [SY] 9/25 Office Space for Rent in Begumpet, Hyderabad → 391 Sq. Ft | Begumpet, Hyderabad
+2026-05-28 18:43:41 [DEBUG] [SY] 10/25 Office Space for Rent in Jubilee Hills, Hyderabad → 4,000 Sq. Ft | Jubilee Hills, Hyderabad
+2026-05-28 18:43:45 [DEBUG] [SY] 11/25 Office Space for Rent in Banjara Hills, Hyderabad → 37,500 Sq. Ft | Banjara Hills, Hyderabad
+2026-05-28 18:43:50 [DEBUG] [SY] 12/25 Office Space in IT/SEZ for Rent in Nanakramguda, Hyderabad → 5,000 Sq. Ft | Nanakramguda, Hyderabad
+2026-05-28 18:43:55 [DEBUG] [SY] 13/25 Office Space for Rent in Gachibowli, Hyderabad → 3,300 Sq. Ft | Gachibowli, Hyderabad
+2026-05-28 18:43:59 [DEBUG] [SY] 14/25 Office Space for Rent in Madhapur, Hyderabad → 2,046 Sq. Ft | Madhapur, Hyderabad
+2026-05-28 18:44:04 [DEBUG] [SY] 15/25 Warehouse for Rent in Miyapur, Hyderabad →  | Miyapur, Hyderabad
+2026-05-28 18:44:09 [DEBUG] [SY] 16/25 Office Space for Rent in Madhapur, Hyderabad → 1,000 Sq. Ft | Madhapur, Hyderabad
+2026-05-28 18:44:15 [DEBUG] [SY] 17/25 Warehouse for Rent in Lakdi Ka Pul, Hyderabad → 2,700 Sq. Ft | Lakdi Ka Pul, Hyderabad
+2026-05-28 18:44:20 [DEBUG] [SY] 18/25 Co-working Space for Rent in Kondapur, Hyderabad → 2,200 Sq. Ft | Kondapur, Hyderabad
+2026-05-28 18:44:25 [DEBUG] [SY] 19/25 Office Space for Rent in Beeramguda, Hyderabad → 1,250 Sq. Ft | Beeramguda, Hyderabad
+2026-05-28 18:44:30 [DEBUG] [SY] 20/25 Showroom for Rent in Nanakramguda, Hyderabad → 2,550 Sq. Ft | Nanakramguda, Hyderabad
+2026-05-28 18:44:35 [DEBUG] [SY] 21/25 Office Space for Rent in Gachibowli, Hyderabad → 2,800 Sq. Ft | Gachibowli, Hyderabad
+2026-05-28 18:44:40 [DEBUG] [SY] 22/25 Office Space for Rent in Madhapur, Hyderabad → 2,146 Sq. Ft | Madhapur, Hyderabad
+2026-05-28 18:44:46 [DEBUG] [SY] 23/25 Warehouse for Rent in Fatehnagar, Hyderabad → 8,000 Sq. Ft | Fatehnagar, Hyderabad
+2026-05-28 18:44:52 [DEBUG] [SY] 24/25 Warehouse for Rent in Attapur, Hyderabad →  | Attapur, Hyderabad
+2026-05-28 18:44:57 [DEBUG] [SY] 25/25 Office Space for Rent in Nanakramguda, Hyderabad → 50,000 Sq. Ft | Nanakramguda, Hyderabad
+2026-05-28 18:44:58 [INFO] [SY] Loading: https://www.squareyards.com/sale/commercial-properties-for-sale-in-hyderabad
+2026-05-28 18:45:21 [INFO] [SY] Scroll done after 3 scrolls for https://www.squareyards.com/sale/commercial-properties-for-sale-in-hyderabad
+2026-05-28 18:45:21 [INFO] [SY] Found 0 cards from https://www.squareyards.com/sale/commercial-properties-for-sale-in-hyderabad
+2026-05-28 18:45:24 [INFO] [SY] After commercial filter: 75/75 listings kept.
+2026-05-28 18:45:24 [INFO] [SY] 41 final listings ready.
+2026-05-28 18:45:24 [INFO] [C&W] Loading static Cushman & Wakefield listings...
+2026-05-28 18:45:24 [INFO] [C&W] 1 listings ready.
+2026-05-28 18:45:24 [INFO] Combined: JLL=50, C&W=1, SY=41, Total=85
+2026-05-28 18:45:24 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260528_184524.xlsx
+2026-05-28 18:45:24 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260528_184524.csv
