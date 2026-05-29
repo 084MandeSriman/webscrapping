@@ -265,20 +265,20 @@ def _parse_sqft_num(val) -> float:
 def build_sheet2(wb, df: pd.DataFrame):
     ws = wb.create_sheet("Market Summary")
     ws.sheet_view.showGridLines = False
-    _set_widths(ws, [24, 14, 22, 22, 22, 18, 36])
+    _set_widths(ws, [24, 14, 22, 36])
 
-    _title(ws, "A1:G1",
+    _title(ws, "A1:D1",
            "Hyderabad Office Market — Summary & Analytics",
            bg=DARK_BLUE, size=12, height=30)
-    _subtitle(ws, "A2:G2",
+    _subtitle(ws, "A2:D2",
               f"Derived from scraped listings  |  {len(df)} properties  |  {datetime.now().strftime('%d %b %Y')}")
 
     row = 4
 
     # ── Section A: Listings by Source ─────────────────────────────────────────
-    _section(ws, row, 7, "A.  Listings by Source")
+    _section(ws, row, 4, "A.  Listings by Source")
     row += 1
-    _header_row(ws, row, ["Source", "No. of Listings", "% of Total", "", "", "", ""], height=20)
+    _header_row(ws, row, ["Source", "No. of Listings", "% of Total", ""], height=20)
     row += 1
 
     total = len(df)
@@ -286,7 +286,7 @@ def build_sheet2(wb, df: pd.DataFrame):
         cnt  = len(grp)
         pct_val = cnt / total if total else 0.0
         bg   = LIGHT_GREY if i % 2 == 0 else WHITE
-        for col, val in enumerate([src, cnt, pct_val, "", "", "", ""], 1):
+        for col, val in enumerate([src, cnt, pct_val, ""], 1):
             c = ws.cell(row=row, column=col, value=val)
             c.fill      = _fill(bg)
             c.font      = _font(bold=(col <= 2), size=9)
@@ -298,7 +298,7 @@ def build_sheet2(wb, df: pd.DataFrame):
         row += 1
 
     # Total row
-    for col, val in enumerate(["TOTAL", total, 1.0, "", "", "", ""], 1):
+    for col, val in enumerate(["TOTAL", total, 1.0, ""], 1):
         c = ws.cell(row=row, column=col, value=val)
         c.fill      = _fill(DARK_BLUE)
         c.font      = _font(bold=True, size=9, color=WHITE)
@@ -310,9 +310,9 @@ def build_sheet2(wb, df: pd.DataFrame):
     row += 2
 
     # ── Section B: Market Summary by Locality ──────────────────────────────────
-    _section(ws, row, 7, "B.  Market Summary by Locality")
+    _section(ws, row, 4, "B.  Market Summary by Locality")
     row += 1
-    _header_row(ws, row, ["Locality", "No. of Listings", "Est. Total Space (sqft)", "Est. Occupied Space (sqft)", "Disclosed Avail. Space (sqft)", "Est. Occupancy Rate", "Major Tenants (Examples)"], height=20)
+    _header_row(ws, row, ["Locality", "No. of Listings", "Est. Total Space (sqft)", "Major Tenants (Examples)"], height=20)
     row += 1
 
     def get_main_locality(r):
@@ -360,35 +360,28 @@ def build_sheet2(wb, df: pd.DataFrame):
         
         if total_sqft > 0:
             est_total_space = total_sqft / (1.0 - occ_rate)
-            est_occupied_space = est_total_space - total_sqft
             total_val = int(est_total_space)
-            occupied_val = int(est_occupied_space)
-            avail_val = int(total_sqft)
         else:
             total_val = None
-            occupied_val = None
-            avail_val = None
             
         bg = LIGHT_GREY if i % 2 == 0 else WHITE
 
-        for col, val in enumerate([loc, cnt, total_val, occupied_val, avail_val, occ_rate, tenants], 1):
+        for col, val in enumerate([loc, cnt, total_val, tenants], 1):
             c = ws.cell(row=row, column=col, value=val)
             c.fill      = _fill(bg)
             c.font      = _font(bold=(col == 1), size=9)
-            c.alignment = _align(h="center" if col in {2, 3, 4, 5, 6} else "left")
+            c.alignment = _align(h="center" if col in {2, 3} else "left")
             c.border    = _border()
-            if col in {3, 4, 5} and val is not None:
+            if col == 3 and val is not None:
                 c.number_format = '#,##0'
-            elif col == 6 and val is not None:
-                c.number_format = '0.0%'
         ws.row_dimensions[row].height = 18
         row += 1
     row += 1
 
     # ── Section C: Available Space Distribution (Area / Size) ──────────────────
-    _section(ws, row, 7, "C.  Available Space Distribution (Area / Size)")
+    _section(ws, row, 4, "C.  Available Space Distribution (Area / Size)")
     row += 1
-    _header_row(ws, row, ["Range", "No. of Listings", "% of Total", "Largest (sqft)", "", "", ""], height=20)
+    _header_row(ws, row, ["Range", "No. of Listings", "% of Total", "Largest (sqft)"], height=20)
     row += 1
 
     df["_sqft"] = df["Area / Size"].apply(_parse_sqft_num)
@@ -403,7 +396,7 @@ def build_sheet2(wb, df: pd.DataFrame):
         pct_val = cnt / total if total else 0.0
         largest_val = int(grp['_sqft'].max()) if cnt > 0 and grp["_sqft"].max() > 0 else None
         bg = GREEN_LIGHT if cnt > 0 else LIGHT_GREY
-        for col, val in enumerate([band, cnt, pct_val, largest_val, "", "", ""], 1):
+        for col, val in enumerate([band, cnt, pct_val, largest_val], 1):
             c = ws.cell(row=row, column=col, value=val)
             c.fill      = _fill(bg)
             c.font      = _font(bold=(col == 1), size=9)
@@ -418,9 +411,9 @@ def build_sheet2(wb, df: pd.DataFrame):
     row += 1
 
     # ── Section D: Rent Summary ────────────────────────────────────────────────
-    _section(ws, row, 7, "D.  Rent / Pricing Summary")
+    _section(ws, row, 4, "D.  Rent / Pricing Summary")
     row += 1
-    _header_row(ws, row, ["Rent Category", "No. of Listings", "% of Total", "", "", "", ""], height=20)
+    _header_row(ws, row, ["Rent Category", "No. of Listings", "% of Total", ""], height=20)
     row += 1
 
     def _rent_cat(val):
@@ -438,7 +431,7 @@ def build_sheet2(wb, df: pd.DataFrame):
         pct_val = cnt / total if total else 0.0
         bg  = YELLOW_LIGHT if "negotiable" in cat.lower() else (
               GREEN_LIGHT if "specified" in cat.lower() else LIGHT_GREY)
-        for col, val in enumerate([cat, cnt, pct_val, "", "", "", ""], 1):
+        for col, val in enumerate([cat, cnt, pct_val, ""], 1):
             c = ws.cell(row=row, column=col, value=val)
             c.fill      = _fill(bg)
             c.font      = _font(bold=(col == 1), size=9)

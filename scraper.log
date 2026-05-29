@@ -1150,3 +1150,109 @@ NameError: name '_click_load_more' is not defined
 2026-05-29 12:32:46 [INFO] Combined: JLL=50, C&W=1, SY=42, CBRE=23, Total=107
 2026-05-29 12:32:47 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260529_123246.xlsx
 2026-05-29 12:32:47 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260529_123247.csv
+2026-05-29 14:04:24 [INFO] [JLL] Target URL: https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-29 14:04:26 [INFO] Loading URL (attempt 1): https://property.jll.co.in/search?tenureTypes=rent&propertyTypes=office&cities=Hyderabad&regions=Telangana&sortBy=dateModified
+2026-05-29 14:04:32 [INFO] [JLL] Page loaded. Starting scroll...
+2026-05-29 14:04:38 [DEBUG] Scroll 1: height=7737px
+2026-05-29 14:04:45 [DEBUG] Scroll 2: height=7737px
+2026-05-29 14:04:48 [INFO] [JLL] Reached end of page after 3 scrolls.
+2026-05-29 14:04:48 [INFO] [JLL] Parsing HTML...
+2026-05-29 14:04:48 [INFO] [JLL] Extracted 50 raw listings.
+2026-05-29 14:04:50 [INFO] [JLL] Clean listings: 50
+2026-05-29 14:04:50 [INFO] [SY] Starting Square Yards Hyderabad commercial scrape...
+2026-05-29 14:04:52 [INFO] [SY] Loading: https://www.squareyards.com/sale/office-spaces-for-sale-in-hyderabad
+2026-05-29 14:05:31 [INFO] [SY] Scroll done after 5 scrolls for https://www.squareyards.com/sale/office-spaces-for-sale-in-hyderabad
+2026-05-29 14:05:31 [INFO] [SY] Found 25 cards from https://www.squareyards.com/sale/office-spaces-for-sale-in-hyderabad
+2026-05-29 14:05:36 [DEBUG] [SY] 1/25 Office Space for Sale in Kondapur, Hyderabad → 9,786 Sq. Ft | Kondapur, Hyderabad
+2026-05-29 14:05:41 [DEBUG] [SY] 2/25 Office Space for Sale in Financial District, Hyderabad → 3,013 Sq. Ft | Financial District, Hyderabad
+2026-05-29 14:05:46 [DEBUG] [SY] 3/25 Office Space for Sale in Hi Tech City, Hyderabad → 9,786 Sq. Ft | Hi Tech City, Hyderabad
+2026-05-29 14:05:51 [DEBUG] [SY] 4/25 Office Space for Sale in Banjara Hills, Hyderabad → 2,635 Sq. Ft | Banjara Hills, Hyderabad
+2026-05-29 14:05:56 [DEBUG] [SY] 5/25 Office Space for Sale in Banjara Hills, Hyderabad → 2,635 Sq. Ft | Banjara Hills, Hyderabad
+2026-05-29 14:06:01 [DEBUG] [SY] 6/25 Office Space for Sale in Kondapur, Hyderabad → 3,013 Sq. Ft | Kondapur, Hyderabad
+2026-05-29 14:06:06 [DEBUG] [SY] 7/25 Office Space for Sale in Nanakramguda, Hyderabad → 3,013 Sq. Ft | Nanakramguda, Hyderabad
+2026-05-29 14:06:11 [DEBUG] [SY] 8/25 Office Space for Sale in Rai Durg, Hyderabad → 8,001 Sq. Ft | Rai Durg, Hyderabad
+2026-05-29 14:06:16 [DEBUG] [SY] 9/25 Office Space for Sale in Kondapur, Hyderabad → 3,013 Sq. Ft | Kondapur, Hyderabad
+2026-05-29 14:06:21 [DEBUG] [SY] 10/25 Office Space for Sale in Abids, Hyderabad → 2,635 Sq. Ft | Abids, Hyderabad
+2026-05-29 14:06:26 [DEBUG] [SY] 11/25 Office Space for Sale in Jubilee Hills, Hyderabad → 2,635 Sq. Ft | Jubilee Hills, Hyderabad
+2026-05-29 14:06:31 [DEBUG] [SY] 12/25 Office Space for Sale in Nanakramguda, Hyderabad → 3,013 Sq. Ft | Nanakramguda, Hyderabad
+2026-05-29 14:06:36 [DEBUG] [SY] 13/25 Office Space for Sale in Madhapur, Hyderabad → 3,013 Sq. Ft | Madhapur, Hyderabad
+2026-05-29 14:06:41 [DEBUG] [SY] 14/25 Office Space for Sale in Gachibowli, Hyderabad → 3,013 Sq. Ft | Gachibowli, Hyderabad
+2026-05-29 14:06:46 [DEBUG] [SY] 15/25 Office Space for Sale in Bowenpally, Hyderabad → 3,013 Sq. Ft | Bowenpally, Hyderabad
+2026-05-29 14:06:51 [DEBUG] [SY] 16/25 Office Space for Sale in Nallagandla, Hyderabad → 1,855 Sq. Ft | Nallagandla, Hyderabad
+2026-05-29 14:06:56 [DEBUG] [SY] 17/25 Office Space for Sale in Lakdi Ka Pul, Hyderabad → 2,635 Sq. Ft | Lakdi Ka Pul, Hyderabad
+2026-05-29 14:07:01 [DEBUG] [SY] 18/25 Office Space for Sale in Hafeezpet, Hyderabad → 3,013 Sq. Ft | Hafeezpet, Hyderabad
+2026-05-29 14:07:06 [DEBUG] [SY] 19/25 Office Space for Sale in Ameerpet, Hyderabad → 2,635 Sq. Ft | Ameerpet, Hyderabad
+2026-05-29 14:07:11 [DEBUG] [SY] 20/25 Office Space for Sale in Begumpet, Hyderabad → 3,013 Sq. Ft | Begumpet, Hyderabad
+2026-05-29 14:07:16 [DEBUG] [SY] 21/25 Office Space for Sale in Jubilee Hills, Hyderabad → 2,635 Sq. Ft | Jubilee Hills, Hyderabad
+2026-05-29 14:07:21 [DEBUG] [SY] 22/25 Office Space for Sale in Neknampur, Hyderabad → 3,013 Sq. Ft | Neknampur, Hyderabad
+2026-05-29 14:07:26 [DEBUG] [SY] 23/25 Office Space for Sale in Banjara Hills, Hyderabad → 2,635 Sq. Ft | Banjara Hills, Hyderabad
+2026-05-29 14:07:31 [DEBUG] [SY] 24/25 Office Space for Sale in Jubilee Hills, Hyderabad → 2,635 Sq. Ft | Jubilee Hills, Hyderabad
+2026-05-29 14:07:36 [DEBUG] [SY] 25/25 Office Space for Sale in Hafeezpet, Hyderabad → 3,013 Sq. Ft | Hafeezpet, Hyderabad
+2026-05-29 14:07:37 [INFO] [SY] Loading: https://www.squareyards.com/rent/office-spaces-for-rent-in-hyderabad
+2026-05-29 14:08:20 [INFO] [SY] Scroll done after 5 scrolls for https://www.squareyards.com/rent/office-spaces-for-rent-in-hyderabad
+2026-05-29 14:08:21 [INFO] [SY] Found 25 cards from https://www.squareyards.com/rent/office-spaces-for-rent-in-hyderabad
+2026-05-29 14:08:25 [DEBUG] [SY] 1/25 Office Space for Rent in Banjara Hills, Hyderabad → 4,925 Sq. Ft | Banjara Hills, Hyderabad
+2026-05-29 14:08:31 [DEBUG] [SY] 2/25 Office Space for Rent in Begumpet, Hyderabad → 1,186 Sq. Ft | Begumpet, Hyderabad
+2026-05-29 14:08:35 [DEBUG] [SY] 3/25 Office Space for Rent in Hi Tech City, Hyderabad → 3,200 Sq. Ft | Hi Tech City, Hyderabad
+2026-05-29 14:08:40 [DEBUG] [SY] 4/25 Office Space for Rent in Kothaguda, Hyderabad → 2,150 Sq. Ft | Kothaguda, Hyderabad
+2026-05-29 14:08:46 [DEBUG] [SY] 5/25 Office Space for Rent in Madhapur, Hyderabad → 10,500 Sq. Ft | Madhapur, Hyderabad
+2026-05-29 14:08:51 [DEBUG] [SY] 6/25 Office Space for Rent in Kondapur, Hyderabad → 8,000 Sq. Ft | Kondapur, Hyderabad
+2026-05-29 14:08:56 [DEBUG] [SY] 7/25 Office Space for Rent in Mehdipatnam, Hyderabad → 2,000 Sq. Ft | Mehdipatnam, Hyderabad
+2026-05-29 14:09:01 [DEBUG] [SY] 8/25 Office Space for Rent in Somajiguda, Hyderabad → 5,500 Sq. Ft | Somajiguda, Hyderabad
+2026-05-29 14:09:06 [DEBUG] [SY] 9/25 Office Space for Rent in Kondapur, Hyderabad → 625 Sq. Ft | Kondapur, Hyderabad
+2026-05-29 14:09:11 [DEBUG] [SY] 10/25 Office Space for Rent in Jubilee Hills, Hyderabad → 4,000 Sq. Ft | Jubilee Hills, Hyderabad
+2026-05-29 14:09:16 [DEBUG] [SY] 11/25 Office Space for Rent in Banjara Hills, Hyderabad → 37,500 Sq. Ft | Banjara Hills, Hyderabad
+2026-05-29 14:09:21 [DEBUG] [SY] 12/25 Office Space for Rent in Gachibowli, Hyderabad → 3,300 Sq. Ft | Gachibowli, Hyderabad
+2026-05-29 14:09:26 [DEBUG] [SY] 13/25 Office Space for Rent in Madhapur, Hyderabad → 2,046 Sq. Ft | Madhapur, Hyderabad
+2026-05-29 14:09:31 [DEBUG] [SY] 14/25 Office Space for Rent in Madhapur, Hyderabad → 1,000 Sq. Ft | Madhapur, Hyderabad
+2026-05-29 14:09:36 [DEBUG] [SY] 15/25 Office Space for Rent in Kokapet, Hyderabad → 3,760 Sq. Ft | Kokapet, Hyderabad
+2026-05-29 14:09:41 [DEBUG] [SY] 16/25 Office Space for Rent in Beeramguda, Hyderabad → 1,250 Sq. Ft | Beeramguda, Hyderabad
+2026-05-29 14:09:46 [DEBUG] [SY] 17/25 Office Space for Rent in Madhapur, Hyderabad → 2,146 Sq. Ft | Madhapur, Hyderabad
+2026-05-29 14:09:51 [DEBUG] [SY] 18/25 Office Space for Rent in Gachibowli, Hyderabad → 2,800 Sq. Ft | Gachibowli, Hyderabad
+2026-05-29 14:09:56 [DEBUG] [SY] 19/25 Office Space for Rent in Nanakramguda, Hyderabad → 50,000 Sq. Ft | Nanakramguda, Hyderabad
+2026-05-29 14:10:01 [DEBUG] [SY] 20/25 Office Space for Rent in Masjid Banda, Hyderabad → 3,200 Sq. Ft | Masjid Banda, Hyderabad
+2026-05-29 14:10:06 [DEBUG] [SY] 21/25 Office Space for Rent in Puppalaguda, Hyderabad → 3,200 Sq. Ft | Puppalaguda, Hyderabad
+2026-05-29 14:10:11 [DEBUG] [SY] 22/25 Office Space for Rent in Madhapur, Hyderabad → 3,400 Sq. Ft | Madhapur, Hyderabad
+2026-05-29 14:10:16 [DEBUG] [SY] 23/25 Office Space for Rent in Kokapet, Hyderabad → 1,800 Sq. Ft | Kokapet, Hyderabad
+2026-05-29 14:10:20 [DEBUG] [SY] 24/25 Office Space for Rent in Khairatabad, Hyderabad → 2,000 Sq. Ft | Khairatabad, Hyderabad
+2026-05-29 14:10:26 [DEBUG] [SY] 25/25 Office Space for Rent in Madhapur, Hyderabad → 1,897 Sq. Ft | Madhapur, Hyderabad
+2026-05-29 14:10:27 [INFO] [SY] Loading: https://www.squareyards.com/rent/commercial-properties-for-rent-in-hyderabad
+2026-05-29 14:11:05 [INFO] [SY] Scroll done after 5 scrolls for https://www.squareyards.com/rent/commercial-properties-for-rent-in-hyderabad
+2026-05-29 14:11:06 [INFO] [SY] Found 25 cards from https://www.squareyards.com/rent/commercial-properties-for-rent-in-hyderabad
+2026-05-29 14:11:10 [DEBUG] [SY] 1/25 Office Space for Rent in Banjara Hills, Hyderabad → 4,925 Sq. Ft | Banjara Hills, Hyderabad
+2026-05-29 14:11:15 [DEBUG] [SY] 2/25 Office Space for Rent in Begumpet, Hyderabad → 1,186 Sq. Ft | Begumpet, Hyderabad
+2026-05-29 14:11:19 [DEBUG] [SY] 3/25 Office Space for Rent in Hi Tech City, Hyderabad → 3,200 Sq. Ft | Hi Tech City, Hyderabad
+2026-05-29 14:11:24 [DEBUG] [SY] 4/25 Office Space for Rent in Kothaguda, Hyderabad → 2,150 Sq. Ft | Kothaguda, Hyderabad
+2026-05-29 14:11:29 [DEBUG] [SY] 5/25 Office Space for Rent in Madhapur, Hyderabad → 10,500 Sq. Ft | Madhapur, Hyderabad
+2026-05-29 14:11:34 [DEBUG] [SY] 6/25 Office Space for Rent in Kondapur, Hyderabad → 8,000 Sq. Ft | Kondapur, Hyderabad
+2026-05-29 14:11:39 [DEBUG] [SY] 7/25 Office Space for Rent in Mehdipatnam, Hyderabad → 2,000 Sq. Ft | Mehdipatnam, Hyderabad
+2026-05-29 14:11:44 [DEBUG] [SY] 8/25 Office Space for Rent in Somajiguda, Hyderabad → 5,500 Sq. Ft | Somajiguda, Hyderabad
+2026-05-29 14:11:49 [DEBUG] [SY] 9/25 Office Space for Rent in Begumpet, Hyderabad → 391 Sq. Ft | Begumpet, Hyderabad
+2026-05-29 14:11:54 [DEBUG] [SY] 10/25 Office Space for Rent in Jubilee Hills, Hyderabad → 4,000 Sq. Ft | Jubilee Hills, Hyderabad
+2026-05-29 14:11:59 [DEBUG] [SY] 11/25 Office Space for Rent in Banjara Hills, Hyderabad → 37,500 Sq. Ft | Banjara Hills, Hyderabad
+2026-05-29 14:12:04 [DEBUG] [SY] 12/25 Office Space for Rent in Gachibowli, Hyderabad → 3,300 Sq. Ft | Gachibowli, Hyderabad
+2026-05-29 14:12:09 [DEBUG] [SY] 13/25 Office Space in IT/SEZ for Rent in Nanakramguda, Hyderabad → 5,000 Sq. Ft | Nanakramguda, Hyderabad
+2026-05-29 14:12:14 [DEBUG] [SY] 14/25 Warehouse for Rent in Miyapur, Hyderabad →  | Miyapur, Hyderabad
+2026-05-29 14:12:19 [DEBUG] [SY] 15/25 Office Space for Rent in Madhapur, Hyderabad → 2,046 Sq. Ft | Madhapur, Hyderabad
+2026-05-29 14:12:24 [DEBUG] [SY] 16/25 Office Space for Rent in Madhapur, Hyderabad → 1,000 Sq. Ft | Madhapur, Hyderabad
+2026-05-29 14:12:29 [DEBUG] [SY] 17/25 Office Space for Rent in Kokapet, Hyderabad → 3,760 Sq. Ft | Kokapet, Hyderabad
+2026-05-29 14:12:34 [DEBUG] [SY] 18/25 Co-working Space for Rent in Kondapur, Hyderabad → 2,200 Sq. Ft | Kondapur, Hyderabad
+2026-05-29 14:12:39 [DEBUG] [SY] 19/25 Showroom for Rent in Nanakramguda, Hyderabad → 2,550 Sq. Ft | Nanakramguda, Hyderabad
+2026-05-29 14:12:44 [DEBUG] [SY] 20/25 Office Space for Rent in Beeramguda, Hyderabad → 1,250 Sq. Ft | Beeramguda, Hyderabad
+2026-05-29 14:12:49 [DEBUG] [SY] 21/25 Office Space for Rent in Madhapur, Hyderabad → 2,146 Sq. Ft | Madhapur, Hyderabad
+2026-05-29 14:12:54 [DEBUG] [SY] 22/25 Office Space for Rent in Gachibowli, Hyderabad → 2,800 Sq. Ft | Gachibowli, Hyderabad
+2026-05-29 14:12:59 [DEBUG] [SY] 23/25 Warehouse for Rent in Fatehnagar, Hyderabad → 8,000 Sq. Ft | Fatehnagar, Hyderabad
+2026-05-29 14:13:04 [DEBUG] [SY] 24/25 Shop for Rent in Ameerpet, Hyderabad → 1,000 Sq. Ft | Ameerpet, Hyderabad
+2026-05-29 14:13:09 [DEBUG] [SY] 25/25 Office Space for Rent in Nanakramguda, Hyderabad → 50,000 Sq. Ft | Nanakramguda, Hyderabad
+2026-05-29 14:13:10 [INFO] [SY] Loading: https://www.squareyards.com/sale/commercial-properties-for-sale-in-hyderabad
+2026-05-29 14:13:34 [INFO] [SY] Scroll done after 3 scrolls for https://www.squareyards.com/sale/commercial-properties-for-sale-in-hyderabad
+2026-05-29 14:13:34 [INFO] [SY] Found 0 cards from https://www.squareyards.com/sale/commercial-properties-for-sale-in-hyderabad
+2026-05-29 14:13:37 [INFO] [SY] After commercial filter: 75/75 listings kept.
+2026-05-29 14:13:37 [INFO] [SY] 39 final listings ready.
+2026-05-29 14:13:37 [INFO] [CBRE] Starting CBRE Hyderabad commercial office rentals scrape...
+2026-05-29 14:13:39 [INFO] [CBRE] 23 listings successfully parsed.
+2026-05-29 14:13:39 [INFO] [C&W] Loading static Cushman & Wakefield listings...
+2026-05-29 14:13:39 [INFO] [C&W] 1 listings ready.
+2026-05-29 14:13:39 [INFO] Combined: JLL=50, C&W=1, SY=39, CBRE=23, Total=43
+2026-05-29 14:13:41 [INFO] Excel saved → output\Combined_Hyderabad_offices_20260529_141339.xlsx
+2026-05-29 14:13:41 [INFO] CSV   saved → output\Combined_Hyderabad_offices_20260529_141341.csv
