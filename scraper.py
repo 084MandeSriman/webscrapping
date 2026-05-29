@@ -13,6 +13,7 @@ import re
 import time
 import argparse
 import traceback
+import requests
 from urllib.parse import urlencode
 
 import pandas as pd
@@ -276,15 +277,34 @@ def apply_combined_rules(df: pd.DataFrame) -> pd.DataFrame:
 
     df['Area / Size'] = df['Area / Size'].apply(_keep_highest_sqft)
 
-    # Rule 2: Remove Ameerpet and Begumpet listings
-    exclude_areas = ['ameerpet', 'begumpet']
-    mask = df['Address'].fillna('').str.lower().apply(
-        lambda addr: not any(area in addr for area in exclude_areas)
-    )
-    df = df[mask].copy()
+    # Locality Filter: Keep only Kokapet, Kondapur, HITEC City, Financial District, Nanakramguda
+    target_areas = ["kokapet", "kondapur", "hitec", "hitech", "hightech", "hi tech", "high tech", "hi-tech", "financial", "finaceal", "nanakramguda"]
+    df = df[df.apply(
+        lambda r: any(a in (str(r.get("Address", "")) + " " + str(r.get("Building Name", ""))).lower() for a in target_areas),
+        axis=1
+    )].copy()
+
+    # Size & Generic Type Filter: Remove small spaces and generic listings
+    df['_sqft_val'] = df['Area / Size'].apply(_parse_sqft)
+
+    generic_keywords = [
+        "office space for", "co-working space", "coworking space", 
+        "shop for", "showroom for", "warehouse for", "work area",
+        "independent building", "independent office"
+    ]
+
+    def _is_small_or_generic(row):
+        name_lower = str(row.get("Building Name", "")).lower()
+        sqft = row["_sqft_val"]
+        if any(kw in name_lower for kw in generic_keywords):
+            return True
+        if 0 < sqft < 10000:
+            return True
+        return False
+
+    df = df[~df.apply(_is_small_or_generic, axis=1)].copy()
 
     # Rule 1: For same building name (case-insensitive), keep only the row with highest sqft
-    df['_sqft_val'] = df['Area / Size'].apply(_parse_sqft)
     df['_name_lower'] = df['Building Name'].str.strip().str.lower()
     df = df.sort_values('_sqft_val', ascending=False)
     df = df.drop_duplicates(subset=['_name_lower'], keep='first')
@@ -332,6 +352,143 @@ def scrape_jll(city: str = "Hyderabad", headless: bool = True, max_scrolls: int 
     df["Source"] = "JLL"
     logger.info(f"[JLL] Clean listings: {len(df)}")
     return df
+
+
+# ── CBRE scraper ──────────────────────────────────────────────────────────────
+
+def scrape_cbre(city: str = "Hyderabad") -> pd.DataFrame:
+    logger = setup_logger()
+    if city.lower() != "hyderabad":
+        logger.warning(f"[CBRE] Scraper is only configured for Hyderabad. Skipping CBRE for city: {city}")
+        return pd.DataFrame()
+
+    logger.info("[CBRE] Starting CBRE Hyderabad commercial office rentals scrape...")
+    
+    # We query the CBRE API directly to fetch all properties (setting PageSize=100 to get all in one call)
+    api_url = (
+        "https://www.cbre.co.in/property-api/propertylistings/query"
+        "?Site=in-comm&RadiusType=Kilometers&CurrencyCode=INR&Unit=sqft"
+        "&lon=78.47724389999999&Lat=17.406498&Lon=-0.12775829999998223"
+        "&PolygonFilters=%5B%5B%2217.681159%2C80.917389%22%2C%2216.025792%2C80.917389%22%2C%2216.025792%2C77.615423%22%2C%2217.681159%2C77.615423%22%5D%5D"
+        "&Common.Aspects=isLetting&Sort=asc(_distance)&Common.UsageType=Office"
+        "&PageSize=100&Page=1"
+        "&_select=Dynamic.PrimaryImage,Common.ActualAddress,Common.Charges,Common.NumberOfBedrooms,Common.PrimaryKey,Common.UsageType,Common.Coordinate,Common.Aspects,Common.ListingCount,Common.IsParent,Common.HomeSite,Common.Agents,Common.PropertySubType,Common.PropertyTypes,Common.ContactGroup,Common.Highlights,Common.Walkthrough,Common.MinimumSize,Common.MaximumSize,Common.TotalSize,Common.GeoLocation,Common.Sizes,Common.LeaseTypes"
+    )
+    
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "application/json, text/plain, */*",
+        "Referer": "https://www.cbre.co.in/properties/office-space-for-rent-hyderabad",
+    }
+    
+    try:
+        response = requests.get(api_url, headers=headers, timeout=20)
+        if response.status_code != 200:
+            logger.error(f"[CBRE] API returned status code {response.status_code}")
+            return pd.DataFrame()
+            
+        data = response.json()
+        documents_list = data.get("Documents", [])
+        if not documents_list or not isinstance(documents_list[0], list):
+            logger.warning("[CBRE] No documents found in API response.")
+            return pd.DataFrame()
+            
+        raw_listings = documents_list[0]
+        records = []
+        
+        for item in raw_listings:
+            addr_dict = item.get("Common.ActualAddress", {})
+            building_name = addr_dict.get("Common.Line1", "").strip()
+            
+            # Form address
+            line2 = addr_dict.get("Common.Line2", "").strip()
+            locality = addr_dict.get("Common.Locallity", "").strip()
+            address = line2 if line2 else locality
+            # Ensure "Hyderabad" is in address
+            if address and "hyderabad" not in address.lower():
+                address = f"{address}, Hyderabad"
+                
+            # Form size
+            size = ""
+            sizes_list = item.get("Common.Sizes", [])
+            if sizes_list:
+                dims = sizes_list[0].get("Common.Dimensions", [])
+                if dims:
+                    size = f"{dims[0].get('Common.Amount'):,.0f} Sq. Ft"
+            if not size:
+                total_sizes = item.get("Common.TotalSize", [])
+                if total_sizes:
+                    min_area = total_sizes[0].get("Common.MinArea", 0)
+                    if min_area:
+                        size = f"{min_area:,.0f} Sq. Ft"
+                        
+            # Form rent
+            rent = "Rent on Application"
+            charges = item.get("Common.Charges", [])
+            if charges:
+                amount = charges[0].get("Common.Amount")
+                per_unit = charges[0].get("Common.PerUnit", "sqft")
+                rent_modifier = charges[0].get("Common.ChargeModifer", "").strip()
+                
+                modifier_str = ""
+                if rent_modifier:
+                    if rent_modifier.lower() == "from":
+                        modifier_str = "From "
+                    elif rent_modifier.lower() == "to":
+                        modifier_str = "To "
+                    else:
+                        modifier_str = f"{rent_modifier} "
+                        
+                if amount:
+                    rent = f"{modifier_str}₹{amount}/{per_unit} pm"
+                    
+            # Form details
+            highlights_list = item.get("Common.Highlights", [])
+            highlights = []
+            for h in highlights_list:
+                sub_h = h.get("Common.Highlight", [])
+                if sub_h:
+                    highlights.append(sub_h[0].get("Common.Text", ""))
+            details = ", ".join(highlights)
+            
+            # Primary Key
+            pk = item.get("Common.PrimaryKey", "")
+            
+            # Generate detail link slug
+            slug = building_name.lower().strip()
+            slug = re.sub(r'[^a-z0-9\s-]', '', slug)
+            slug = re.sub(r'[\s-]+', '-', slug)
+            detail_link = f"https://www.cbre.co.in/properties/office/details/{pk}/{slug}" if pk else ""
+            
+            # Image URL
+            img_url = ""
+            img_res = item.get("Dynamic.PrimaryImage", {}).get("Common.ImageResources", [])
+            if img_res:
+                img_url = img_res[0].get("Source.Uri", "")
+                
+            records.append({
+                "Building Name":    building_name,
+                "Property Type":    item.get("Common.UsageType", "Office"),
+                "Address":          address,
+                "Area / Size":      size,
+                "Rent":             rent,
+                "City":             city,
+                "Region":           CITY_REGION_MAP.get(city, ""),
+                "Property Details": details,
+                "Property Link":    detail_link,
+                "Image URL":        img_url,
+                "Listing ID":       pk,
+                "Source":           "CBRE"
+            })
+            
+        df = pd.DataFrame(records)
+        df = clean_dataframe(df)
+        logger.info(f"[CBRE] {len(df)} listings successfully parsed.")
+        return df
+        
+    except Exception as e:
+        logger.error(f"[CBRE] Error querying API:\n{traceback.format_exc()}")
+        return pd.DataFrame()
 
 
 # ── Cushman & Wakefield scraper ───────────────────────────────────────────────
@@ -966,8 +1123,9 @@ def scrape_all(city: str = "Hyderabad", headless: bool = True, max_scrolls: int 
     logger = setup_logger()
     ensure_output_dir(OUTPUT_DIR)
 
-    df_jll = scrape_jll(city=city, headless=headless, max_scrolls=max_scrolls)
-    df_sy  = scrape_squareyards(headless=headless)
+    df_jll  = scrape_jll(city=city, headless=headless, max_scrolls=max_scrolls)
+    df_sy   = scrape_squareyards(headless=headless)
+    df_cbre = scrape_cbre(city=city)
 
     # Always use static C&W data
     logger.info("[C&W] Loading static Cushman & Wakefield listings...")
@@ -978,25 +1136,27 @@ def scrape_all(city: str = "Hyderabad", headless: bool = True, max_scrolls: int 
     all_cols = list(dict.fromkeys(
         list(df_jll.columns if not df_jll.empty else []) +
         list(df_cw.columns) +
-        list(df_sy.columns if not df_sy.empty else [])
+        list(df_sy.columns if not df_sy.empty else []) +
+        list(df_cbre.columns if not df_cbre.empty else [])
     ))
-    for df in [df_jll, df_cw, df_sy]:
+    for df in [df_jll, df_cw, df_sy, df_cbre]:
         for col in all_cols:
             if col not in df.columns:
                 df[col] = ""
 
     df_combined = pd.concat(
-        [d[all_cols] for d in [df_jll, df_cw, df_sy] if not d.empty],
+        [d[all_cols] for d in [df_jll, df_cw, df_sy, df_cbre] if not d.empty],
         ignore_index=True
     )
     df_combined = apply_combined_rules(df_combined)
 
-    logger.info(f"Combined: JLL={len(df_jll)}, C&W={len(df_cw)}, SY={len(df_sy)}, Total={len(df_combined)}")
+    logger.info(f"Combined: JLL={len(df_jll)}, C&W={len(df_cw)}, SY={len(df_sy)}, CBRE={len(df_cbre)}, Total={len(df_combined)}")
 
     sheets = {}
-    if not df_jll.empty:  sheets["JLL"]                 = df_jll
+    if not df_jll.empty:   sheets["JLL"]                 = df_jll
     sheets["Cushman & Wakefield"]                        = df_cw
-    if not df_sy.empty:   sheets["Square Yards"]         = df_sy
+    if not df_sy.empty:    sheets["Square Yards"]         = df_sy
+    if not df_cbre.empty:  sheets["CBRE"]                 = df_cbre
     sheets["Combined"]                                   = df_combined
 
     excel_path = save_excel_multi(sheets, OUTPUT_DIR, city)
@@ -1009,13 +1169,14 @@ def scrape_all(city: str = "Hyderabad", headless: bool = True, max_scrolls: int 
 # ── CLI ───────────────────────────────────────────────────────────────────────
 
 def main():
-    parser = argparse.ArgumentParser(description="JLL + C&W + Square Yards Office Listings Scraper")
+    parser = argparse.ArgumentParser(description="JLL + C&W + Square Yards + CBRE Office Listings Scraper")
     parser.add_argument("--city",        default="Hyderabad", choices=list(CITY_REGION_MAP.keys()))
     parser.add_argument("--no-headless", action="store_true")
     parser.add_argument("--max-scrolls", type=int, default=50)
     parser.add_argument("--jll-only",    action="store_true")
     parser.add_argument("--cw-only",     action="store_true")
     parser.add_argument("--sy-only",     action="store_true", help="Scrape Square Yards only")
+    parser.add_argument("--cbre-only",   action="store_true", help="Scrape CBRE only")
     args = parser.parse_args()
 
     headless = not args.no_headless
@@ -1026,6 +1187,8 @@ def main():
         df = scrape_cw(headless=headless)
     elif args.sy_only:
         df = scrape_squareyards(headless=headless)
+    elif args.cbre_only:
+        df = scrape_cbre(city=args.city)
     else:
         df = scrape_all(city=args.city, headless=headless, max_scrolls=args.max_scrolls)
 

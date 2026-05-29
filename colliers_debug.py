@@ -10,7 +10,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 
-URL = "https://www.colliers.com/en-in/properties#sort=relevancy&f:listingtype=[All%20Listings]&f:recenttransactions=[0]"
+URL = "https://www.colliers.com/en-in/properties#q=Hyderabad&sort=relevancy&f:listingtype=[All%20Listings]&f:recenttransactions=[0]"
 BASE_DOMAIN = "https://www.colliers.com"
 
 opts = Options()
