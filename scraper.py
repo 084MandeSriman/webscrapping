@@ -295,7 +295,11 @@ def apply_combined_rules(df: pd.DataFrame) -> pd.DataFrame:
 
     def _is_small_or_generic(row):
         name_lower = str(row.get("Building Name", "")).lower()
+        addr_lower = str(row.get("Address", "")).lower()
         sqft = row["_sqft_val"]
+        # Never drop Kokapet listings based on size/type
+        if "kokapet" in addr_lower or "kokapet" in name_lower:
+            return False
         if any(kw in name_lower for kw in generic_keywords):
             return True
         if 0 < sqft < 10000:
@@ -305,12 +309,20 @@ def apply_combined_rules(df: pd.DataFrame) -> pd.DataFrame:
     df = df[~df.apply(_is_small_or_generic, axis=1)].copy()
 
     # Rule 1: For same building name (case-insensitive), keep only the row with highest sqft
-    df['_name_lower'] = df['Building Name'].str.strip().str.lower()
-    df = df.sort_values('_sqft_val', ascending=False)
-    df = df.drop_duplicates(subset=['_name_lower'], keep='first')
-    df = df.drop(columns=['_sqft_val', '_name_lower'])
-    df = df.reset_index(drop=True)
+    # BUT always keep residential rows — deduplicate commercial separately
+    df_res = df[df["Source"] == "Residential"].copy()
+    df_com = df[df["Source"] != "Residential"].copy()
 
+    df_com['_name_lower'] = df_com['Building Name'].str.strip().str.lower()
+    df_com = df_com.sort_values('_sqft_val', ascending=False)
+    df_com = df_com.drop_duplicates(subset=['_name_lower'], keep='first')
+    df_com = df_com.drop(columns=['_sqft_val', '_name_lower'])
+
+    df_res['_name_lower'] = df_res['Building Name'].str.strip().str.lower()
+    df_res = df_res.drop_duplicates(subset=['_name_lower'], keep='first')
+    df_res = df_res.drop(columns=['_sqft_val', '_name_lower'], errors='ignore')
+
+    df = pd.concat([df_com, df_res], ignore_index=True).reset_index(drop=True)
     return df
 
 
@@ -630,6 +642,9 @@ SY_URLS = [
     "https://www.squareyards.com/rent/office-spaces-for-rent-in-hyderabad",
     "https://www.squareyards.com/rent/commercial-properties-for-rent-in-hyderabad",
     "https://www.squareyards.com/sale/commercial-properties-for-sale-in-hyderabad",
+    "https://www.squareyards.com/kokapet-hyderabad-real-estate",
+    "https://www.squareyards.com/sale/residential-properties-for-sale-in-kokapet-hyderabad",
+    "https://www.squareyards.com/rent/residential-properties-for-rent-in-kokapet-hyderabad",
 ]
 
 def scrape_squareyards(headless: bool = True) -> pd.DataFrame:
@@ -711,7 +726,7 @@ def scrape_squareyards(headless: bool = True) -> pd.DataFrame:
     df["City"]   = "Hyderabad"
     df["Region"] = "Telangana"
 
-    # ── Filter: Commercial/Office only ─────────────────────────────────────────────
+    # ── Filter: Commercial/Office OR Kokapet residential ──────────────────────
     PURELY_RESIDENTIAL = [
         "bhk flat", "bhk apartment", "bhk villa", "residential apartment",
         "residential project", "gated community", "township", "pg for rent",
@@ -731,20 +746,23 @@ def scrape_squareyards(headless: bool = True) -> pd.DataFrame:
             str(row.get("Property Type", "")),
             str(row.get("Property Details", "")),
             str(row.get("Property Link", "")),
+            str(row.get("Address", "")),
         ]).lower()
 
-        # Reject if purely residential description
+        # Always keep Kokapet residential listings
+        if "kokapet" in full_text:
+            return True
+        # Reject purely residential outside Kokapet
         if any(kw in full_text for kw in PURELY_RESIDENTIAL):
             return False
-        # Keep if has office/commercial keyword
+        # Keep commercial/office
         if any(kw in full_text for kw in OFFICE_KEYWORDS):
             return True
-        # Keep everything else from SY (already on commercial URLs)
         return True
 
     before = len(df)
     df = df[df.apply(_is_commercial_office, axis=1)].copy()
-    logger.info(f"[SY] After commercial filter: {len(df)}/{before} listings kept.")
+    logger.info(f"[SY] After commercial/Kokapet-residential filter: {len(df)}/{before} listings kept.")
 
     # Clean messy address (remove newlines, extra spaces)
     df["Address"] = df["Address"].apply(
@@ -1117,6 +1135,336 @@ def _parse_sy_listings(soup) -> list:
     return records
 
 
+# ── Kokapet Residential scraper ─────────────────────────────────────────────
+
+# Well-known Kokapet residential projects — static seed data
+KOKAPET_RESIDENTIAL_STATIC = [
+    {
+        "Building Name":    "My Home Avatar",
+        "Property Type":    "Residential Apartment",
+        "Address":          "Kokapet, Hyderabad, Telangana",
+        "Area / Size":      "",
+        "Rent":             "Price on Request",
+        "City":             "Hyderabad",
+        "Region":           "Telangana",
+        "Property Details": "Ultra-luxury residential towers at Kokapet.",
+        "Property Link":    "https://www.squareyards.com/my-home-avatar-kokapet-hyderabad",
+        "Image URL":        "",
+        "Listing ID":       "my-home-avatar-kokapet",
+        "Source":           "Residential",
+    },
+    {
+        "Building Name":    "Prestige Plots Kokapet",
+        "Property Type":    "Residential Plot",
+        "Address":          "Kokapet, Hyderabad, Telangana",
+        "Area / Size":      "",
+        "Rent":             "Price on Request",
+        "City":             "Hyderabad",
+        "Region":           "Telangana",
+        "Property Details": "Gated residential plotted development at Kokapet.",
+        "Property Link":    "https://www.squareyards.com/prestige-plots-kokapet-hyderabad",
+        "Image URL":        "",
+        "Listing ID":       "prestige-plots-kokapet",
+        "Source":           "Residential",
+    },
+    {
+        "Building Name":    "Aparna Zenon",
+        "Property Type":    "Residential Apartment",
+        "Address":          "Kokapet, Hyderabad, Telangana",
+        "Area / Size":      "",
+        "Rent":             "Price on Request",
+        "City":             "Hyderabad",
+        "Region":           "Telangana",
+        "Property Details": "Premium residential apartments at Kokapet.",
+        "Property Link":    "https://www.squareyards.com/aparna-zenon-kokapet-hyderabad",
+        "Image URL":        "",
+        "Listing ID":       "aparna-zenon-kokapet",
+        "Source":           "Residential",
+    },
+    {
+        "Building Name":    "Lodha Hyderabad",
+        "Property Type":    "Residential Apartment",
+        "Address":          "Kokapet, Hyderabad, Telangana",
+        "Area / Size":      "",
+        "Rent":             "Price on Request",
+        "City":             "Hyderabad",
+        "Region":           "Telangana",
+        "Property Details": "Luxury residential project by Lodha at Kokapet.",
+        "Property Link":    "https://www.lodhagroup.com/hyderabad",
+        "Image URL":        "",
+        "Listing ID":       "lodha-hyderabad-kokapet",
+        "Source":           "Residential",
+    },
+    {
+        "Building Name":    "Rajapushpa Atria",
+        "Property Type":    "Residential Apartment",
+        "Address":          "Kokapet, Hyderabad, Telangana",
+        "Area / Size":      "",
+        "Rent":             "Price on Request",
+        "City":             "Hyderabad",
+        "Region":           "Telangana",
+        "Property Details": "High-rise residential towers at Kokapet by Rajapushpa.",
+        "Property Link":    "https://www.squareyards.com/rajapushpa-atria-kokapet-hyderabad",
+        "Image URL":        "",
+        "Listing ID":       "rajapushpa-atria-kokapet",
+        "Source":           "Residential",
+    },
+    {
+        "Building Name":    "Incor One City",
+        "Property Type":    "Residential Apartment",
+        "Address":          "Kokapet, Hyderabad, Telangana",
+        "Area / Size":      "",
+        "Rent":             "Price on Request",
+        "City":             "Hyderabad",
+        "Region":           "Telangana",
+        "Property Details": "Integrated township at Kokapet by Incor.",
+        "Property Link":    "https://www.squareyards.com/incor-one-city-kokapet-hyderabad",
+        "Image URL":        "",
+        "Listing ID":       "incor-one-city-kokapet",
+        "Source":           "Residential",
+    },
+    {
+        "Building Name":    "Bhavana Celestia",
+        "Property Type":    "Residential Apartment",
+        "Address":          "Kokapet, Hyderabad, Telangana",
+        "Area / Size":      "",
+        "Rent":             "Price on Request",
+        "City":             "Hyderabad",
+        "Region":           "Telangana",
+        "Property Details": "Premium gated community at Kokapet.",
+        "Property Link":    "https://www.squareyards.com/bhavana-celestia-kokapet-hyderabad",
+        "Image URL":        "",
+        "Listing ID":       "bhavana-celestia-kokapet",
+        "Source":           "Residential",
+    },
+    {
+        "Building Name":    "NSL Arena",
+        "Property Type":    "Residential Apartment",
+        "Address":          "Kokapet, Hyderabad, Telangana",
+        "Area / Size":      "",
+        "Rent":             "Price on Request",
+        "City":             "Hyderabad",
+        "Region":           "Telangana",
+        "Property Details": "Residential apartments at Kokapet by NSL.",
+        "Property Link":    "https://www.squareyards.com/nsl-arena-kokapet-hyderabad",
+        "Image URL":        "",
+        "Listing ID":       "nsl-arena-kokapet",
+        "Source":           "Residential",
+    },
+    {
+        "Building Name":    "Phoenix Kessaku",
+        "Property Type":    "Residential Apartment",
+        "Address":          "Kokapet, Hyderabad, Telangana",
+        "Area / Size":      "",
+        "Rent":             "Price on Request",
+        "City":             "Hyderabad",
+        "Region":           "Telangana",
+        "Property Details": "Ultra-luxury high-rise residential at Kokapet by Phoenix.",
+        "Property Link":    "https://www.squareyards.com/phoenix-kessaku-kokapet-hyderabad",
+        "Image URL":        "",
+        "Listing ID":       "phoenix-kessaku-kokapet",
+        "Source":           "Residential",
+    },
+    {
+        "Building Name":    "My Home Tridasa",
+        "Property Type":    "Residential Apartment",
+        "Address":          "Kokapet, Hyderabad, Telangana",
+        "Area / Size":      "",
+        "Rent":             "Price on Request",
+        "City":             "Hyderabad",
+        "Region":           "Telangana",
+        "Property Details": "Luxury residential towers at Kokapet by My Home Group.",
+        "Property Link":    "https://www.squareyards.com/my-home-tridasa-kokapet-hyderabad",
+        "Image URL":        "",
+        "Listing ID":       "my-home-tridasa-kokapet",
+        "Source":           "Residential",
+    },
+]
+
+
+def scrape_kokapet_residential(headless: bool = True) -> pd.DataFrame:
+    """
+    Scrape Kokapet residential listings from Square Yards project pages.
+    Falls back to static seed data if live scraping yields nothing.
+    """
+    logger = setup_logger()
+    logger.info("[RES] Scraping Kokapet residential listings...")
+
+    urls = [
+        "https://www.squareyards.com/sale/residential-properties-for-sale-in-kokapet-hyderabad",
+        "https://www.squareyards.com/rent/residential-properties-for-rent-in-kokapet-hyderabad",
+        "https://www.squareyards.com/kokapet-hyderabad-real-estate",
+    ]
+
+    driver = create_driver(headless=headless)
+    records = []
+
+    try:
+        for url in urls:
+            logger.info(f"[RES] Loading: {url}")
+            driver.get(url)
+            try:
+                WebDriverWait(driver, 20).until(
+                    EC.presence_of_element_located((By.TAG_NAME, "body"))
+                )
+            except Exception:
+                pass
+            time.sleep(6)
+
+            # scroll a few times to load cards
+            last_h = driver.execute_script("return document.body.scrollHeight")
+            for _ in range(15):
+                driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+                time.sleep(2.5)
+                nh = driver.execute_script("return document.body.scrollHeight")
+                if nh == last_h:
+                    break
+                last_h = nh
+
+            soup = BeautifulSoup(driver.page_source, "lxml")
+            found = _parse_kokapet_res_cards(soup, url)
+            logger.info(f"[RES] Found {len(found)} cards from {url}")
+            records.extend(found)
+    except Exception:
+        logger.error(f"[RES] Error:\n{traceback.format_exc()}")
+    finally:
+        driver.quit()
+
+    # Deduplicate by name
+    seen = set()
+    unique = []
+    for r in records:
+        key = r["Building Name"].strip().lower()
+        if key and key not in seen:
+            seen.add(key)
+            unique.append(r)
+
+    if not unique:
+        logger.warning("[RES] Live scrape returned nothing. Using static Kokapet residential seed.")
+        unique = KOKAPET_RESIDENTIAL_STATIC
+    else:
+        # Merge static entries not already found
+        static_names = {r["Building Name"].strip().lower() for r in KOKAPET_RESIDENTIAL_STATIC}
+        extra = [r for r in KOKAPET_RESIDENTIAL_STATIC if r["Building Name"].strip().lower() not in seen]
+        unique.extend(extra)
+        logger.info(f"[RES] Added {len(extra)} static seed entries not found live.")
+
+    df = pd.DataFrame(unique)
+    df["Source"] = "Residential"
+    df["City"]   = "Hyderabad"
+    df["Region"] = "Telangana"
+    logger.info(f"[RES] {len(df)} Kokapet residential listings ready.")
+    return df
+
+
+def _parse_kokapet_res_cards(soup, source_url: str) -> list:
+    """Parse project/listing cards from Kokapet residential pages."""
+    records = []
+    base = "https://www.squareyards.com"
+
+    # Try listing cards first, then project tiles
+    cards = soup.select("article.listing-card")
+    if not cards:
+        cards = soup.select("article.property-tile, article.focus-card, [class*='project-card'], [class*='projectCard']")
+
+    for card in cards:
+        # Name
+        name = ""
+        for sel in ["h2.heading span", "h2.heading a", "h2", "h3",
+                    "[class*='project-name']", "[class*='projectName']"]:
+            el = card.select_one(sel)
+            if el:
+                t = el.get_text(strip=True)
+                if t and len(t) < 120 and "View All" not in t:
+                    name = t
+                    break
+        if not name:
+            fav = card.select_one(".favorite-btn")
+            if fav:
+                name = fav.get("data-propname", "") or fav.get("data-name", "")
+        if not name:
+            img = card.select_one("img")
+            if img:
+                name = img.get("alt", "")
+        if not name or "View All" in name:
+            continue
+
+        # Link
+        prop_link = ""
+        body = card.select_one(".listing-body")
+        if body:
+            prop_link = body.get("data-url", "")
+        if not prop_link:
+            a = card.select_one("a[href]")
+            if a:
+                prop_link = a["href"]
+        if prop_link and not prop_link.startswith("http"):
+            prop_link = base + "/" + prop_link.lstrip("/")
+
+        # Address
+        address = "Kokapet, Hyderabad"
+        for sel in ["p.location span", "[class*='locality']", "[class*='location']",
+                    "[class*='address']", ".project-address"]:
+            el = card.select_one(sel)
+            if el:
+                t = el.get_text(" ", strip=True)
+                if t and 3 < len(t) < 120:
+                    address = t
+                    if "kokapet" not in address.lower():
+                        address = "Kokapet, " + address
+                    break
+
+        # Price
+        price = "Price on Request"
+        price_el = card.select_one("p.listing-price strong")
+        if price_el:
+            price = price_el.get_text(strip=True)
+        if not price or price == "Price on Request":
+            fav = card.select_one(".favorite-btn")
+            if fav and fav.get("data-totalprice"):
+                price = fav["data-totalprice"]
+
+        # Size
+        size = ""
+        area_el = card.select_one(".avail-area")
+        if area_el:
+            av = area_el.get("data-area", "")
+            unit_el = area_el.select_one(".unit-label")
+            unit = unit_el.get_text(strip=True) if unit_el else "Sq.Ft."
+            if av:
+                try:
+                    size = f"{int(float(av)):,} {unit}"
+                except Exception:
+                    size = f"{av} {unit}"
+
+        # Property type
+        prop_type = "Residential"
+        fav = card.select_one(".favorite-btn")
+        if fav:
+            prop_type = fav.get("data-unittype") or fav.get("data-propertytype") or "Residential"
+
+        # Image
+        img = card.select_one("img.img-responsive, img")
+        image_url = img.get("src", "") if img else ""
+
+        records.append({
+            "Building Name":    name,
+            "Property Type":    prop_type,
+            "Address":          address,
+            "Area / Size":      size,
+            "Rent":             price,
+            "Property Details": "",
+            "Property Link":    prop_link,
+            "Image URL":        image_url,
+            "Listing ID":       prop_link.rstrip("/").split("/")[-1] if prop_link else "",
+            "Source":           "Residential",
+            "City":             "Hyderabad",
+            "Region":           "Telangana",
+        })
+
+    return records
+
+
 # ── Combined scraper ──────────────────────────────────────────────────────────
 
 def scrape_all(city: str = "Hyderabad", headless: bool = True, max_scrolls: int = 50) -> pd.DataFrame:
@@ -1126,6 +1474,7 @@ def scrape_all(city: str = "Hyderabad", headless: bool = True, max_scrolls: int 
     df_jll  = scrape_jll(city=city, headless=headless, max_scrolls=max_scrolls)
     df_sy   = scrape_squareyards(headless=headless)
     df_cbre = scrape_cbre(city=city)
+    df_res  = scrape_kokapet_residential(headless=headless)
 
     # Always use static C&W data
     logger.info("[C&W] Loading static Cushman & Wakefield listings...")
@@ -1137,26 +1486,28 @@ def scrape_all(city: str = "Hyderabad", headless: bool = True, max_scrolls: int 
         list(df_jll.columns if not df_jll.empty else []) +
         list(df_cw.columns) +
         list(df_sy.columns if not df_sy.empty else []) +
-        list(df_cbre.columns if not df_cbre.empty else [])
+        list(df_cbre.columns if not df_cbre.empty else []) +
+        list(df_res.columns if not df_res.empty else [])
     ))
-    for df in [df_jll, df_cw, df_sy, df_cbre]:
+    for df in [df_jll, df_cw, df_sy, df_cbre, df_res]:
         for col in all_cols:
             if col not in df.columns:
                 df[col] = ""
 
     df_combined = pd.concat(
-        [d[all_cols] for d in [df_jll, df_cw, df_sy, df_cbre] if not d.empty],
+        [d[all_cols] for d in [df_jll, df_cw, df_sy, df_cbre, df_res] if not d.empty],
         ignore_index=True
     )
     df_combined = apply_combined_rules(df_combined)
 
-    logger.info(f"Combined: JLL={len(df_jll)}, C&W={len(df_cw)}, SY={len(df_sy)}, CBRE={len(df_cbre)}, Total={len(df_combined)}")
+    logger.info(f"Combined: JLL={len(df_jll)}, C&W={len(df_cw)}, SY={len(df_sy)}, CBRE={len(df_cbre)}, Residential={len(df_res)}, Total={len(df_combined)}")
 
     sheets = {}
     if not df_jll.empty:   sheets["JLL"]                 = df_jll
     sheets["Cushman & Wakefield"]                        = df_cw
     if not df_sy.empty:    sheets["Square Yards"]         = df_sy
     if not df_cbre.empty:  sheets["CBRE"]                 = df_cbre
+    if not df_res.empty:   sheets["Kokapet Residential"]  = df_res
     sheets["Combined"]                                   = df_combined
 
     excel_path = save_excel_multi(sheets, OUTPUT_DIR, city)

@@ -97,6 +97,43 @@ def _set_widths(ws, widths):
 
 # ── Load latest scraped data ──────────────────────────────────────────────────
 
+# Residential static seed — Kokapet, Kondapur, HITEC City, Financial District
+KOKAPET_RESIDENTIAL_STATIC = [
+    # ── KOKAPET ──────────────────────────────────────────────────────────────────
+    {"Building Name": "My Home Avatar",           "Property Type": "Residential Apartment", "Address": "Kokapet, Hyderabad",          "Area / Size": "3,500 Sq. Ft",  "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Ultra-luxury residential towers at Kokapet by My Home Group.",          "Property Link": "https://www.squareyards.com/my-home-avatar-kokapet-hyderabad",        "Source": "Residential"},
+    {"Building Name": "My Home Tridasa",          "Property Type": "Residential Apartment", "Address": "Kokapet, Hyderabad",          "Area / Size": "2,800 Sq. Ft",  "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Luxury residential towers at Kokapet by My Home Group.",                  "Property Link": "https://www.squareyards.com/my-home-tridasa-kokapet-hyderabad",       "Source": "Residential"},
+    {"Building Name": "Phoenix Kessaku",          "Property Type": "Residential Apartment", "Address": "Kokapet, Hyderabad",          "Area / Size": "4,200 Sq. Ft",  "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Ultra-luxury high-rise residential at Kokapet by Phoenix Mills.",           "Property Link": "https://www.squareyards.com/phoenix-kessaku-kokapet-hyderabad",       "Source": "Residential"},
+    {"Building Name": "Aparna Zenon",             "Property Type": "Residential Apartment", "Address": "Kokapet, Hyderabad",          "Area / Size": "2,200 Sq. Ft",  "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Premium residential apartments at Kokapet by Aparna Constructions.",       "Property Link": "https://www.squareyards.com/aparna-zenon-kokapet-hyderabad",          "Source": "Residential"},
+    {"Building Name": "Rajapushpa Atria",         "Property Type": "Residential Apartment", "Address": "Kokapet, Hyderabad",          "Area / Size": "2,600 Sq. Ft",  "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "High-rise residential towers at Kokapet by Rajapushpa Properties.",         "Property Link": "https://www.squareyards.com/rajapushpa-atria-kokapet-hyderabad",      "Source": "Residential"},
+    {"Building Name": "Incor One City",           "Property Type": "Residential Apartment", "Address": "Kokapet, Hyderabad",          "Area / Size": "1,800 Sq. Ft",  "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Integrated township at Kokapet by Incor Group.",                           "Property Link": "https://www.squareyards.com/incor-one-city-kokapet-hyderabad",         "Source": "Residential"},
+    {"Building Name": "Lodha Hyderabad",          "Property Type": "Residential Apartment", "Address": "Kokapet, Hyderabad",          "Area / Size": "3,100 Sq. Ft",  "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Luxury residential project by Lodha Group at Kokapet.",                    "Property Link": "https://www.lodhagroup.com/hyderabad",                              "Source": "Residential"},
+    {"Building Name": "Bhavana Celestia",         "Property Type": "Residential Apartment", "Address": "Kokapet, Hyderabad",          "Area / Size": "1,950 Sq. Ft",  "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Premium gated community apartments at Kokapet.",                           "Property Link": "https://www.squareyards.com/bhavana-celestia-kokapet-hyderabad",      "Source": "Residential"},
+    {"Building Name": "NSL Arena",               "Property Type": "Residential Apartment", "Address": "Kokapet, Hyderabad",          "Area / Size": "1,750 Sq. Ft",  "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Residential apartments at Kokapet by NSL Group.",                          "Property Link": "https://www.squareyards.com/nsl-arena-kokapet-hyderabad",             "Source": "Residential"},
+    {"Building Name": "Prestige Plots Kokapet",   "Property Type": "Residential Plot",      "Address": "Kokapet, Hyderabad",          "Area / Size": "267 Sq. Yd",    "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Gated residential plotted development at Kokapet by Prestige Group.",       "Property Link": "https://www.squareyards.com/prestige-plots-kokapet-hyderabad",       "Source": "Residential"},
+    {"Building Name": "Aliens Space Station",    "Property Type": "Residential Apartment", "Address": "Kokapet, Hyderabad",          "Area / Size": "3,800 Sq. Ft",  "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Landmark residential towers at Kokapet — one of Hyderabad's tallest.",     "Property Link": "https://www.squareyards.com/aliens-space-station-kokapet-hyderabad", "Source": "Residential"},
+    {"Building Name": "Jayabheri The Peak",       "Property Type": "Residential Apartment", "Address": "Kokapet, Hyderabad",          "Area / Size": "2,450 Sq. Ft",  "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "High-rise luxury residential project at Kokapet by Jayabheri Group.",       "Property Link": "https://www.squareyards.com/jayabheri-the-peak-kokapet-hyderabad",    "Source": "Residential"},
+    # ── KONDAPUR ─────────────────────────────────────────────────────────────────
+    {"Building Name": "Prestige High Fields",     "Property Type": "Residential Apartment", "Address": "Kondapur, Hyderabad",         "Area / Size": "2,900 Sq. Ft",  "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Premium high-rise residential towers at Kondapur by Prestige Group.",      "Property Link": "https://www.squareyards.com/prestige-high-fields-kondapur-hyderabad", "Source": "Residential"},
+    {"Building Name": "Aparna Sarovar Zenith",   "Property Type": "Residential Apartment", "Address": "Kondapur, Hyderabad",         "Area / Size": "2,100 Sq. Ft",  "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Luxury gated community at Kondapur by Aparna Constructions.",               "Property Link": "https://www.squareyards.com/aparna-sarovar-zenith-kondapur-hyderabad", "Source": "Residential"},
+    {"Building Name": "My Home Bhooja",          "Property Type": "Residential Apartment", "Address": "Kondapur, Hyderabad",         "Area / Size": "4,500 Sq. Ft",  "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Landmark ultra-luxury residential towers at Kondapur by My Home Group.",   "Property Link": "https://www.squareyards.com/my-home-bhooja-kondapur-hyderabad",       "Source": "Residential"},
+    {"Building Name": "Aliens Hub",              "Property Type": "Residential Apartment", "Address": "Kondapur, Hyderabad",         "Area / Size": "1,650 Sq. Ft",  "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Premium residential community at Kondapur by Aliens Developers.",          "Property Link": "https://www.squareyards.com/aliens-hub-kondapur-hyderabad",           "Source": "Residential"},
+    {"Building Name": "Salarpuria Sattva Senorita", "Property Type": "Residential Apartment", "Address": "Kondapur, Hyderabad",       "Area / Size": "1,550 Sq. Ft",  "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Residential apartments at Kondapur by Salarpuria Sattva.",                 "Property Link": "https://www.squareyards.com/salarpuria-sattva-senorita-kondapur-hyderabad", "Source": "Residential"},
+    {"Building Name": "Jayabheri Orange County", "Property Type": "Residential Apartment", "Address": "Kondapur, Hyderabad",         "Area / Size": "1,850 Sq. Ft",  "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Gated residential community at Kondapur by Jayabheri Group.",              "Property Link": "https://www.squareyards.com/jayabheri-orange-county-kondapur-hyderabad", "Source": "Residential"},
+    # ── HITEC CITY ─────────────────────────────────────────────────────────────
+    {"Building Name": "My Home Jewel",           "Property Type": "Residential Apartment", "Address": "HITEC City, Hyderabad",       "Area / Size": "2,350 Sq. Ft",  "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Premium residential project near HITEC City by My Home Group.",            "Property Link": "https://www.squareyards.com/my-home-jewel-hitec-city-hyderabad",      "Source": "Residential"},
+    {"Building Name": "Vasavi GP Trends",        "Property Type": "Residential Apartment", "Address": "HITEC City, Hyderabad",       "Area / Size": "1,480 Sq. Ft",  "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Gated residential community near HITEC City by Vasavi Group.",              "Property Link": "https://www.squareyards.com/vasavi-gp-trends-hitec-city-hyderabad",   "Source": "Residential"},
+    {"Building Name": "Aparna Kanopy Tulip",    "Property Type": "Residential Apartment", "Address": "HITEC City, Hyderabad",       "Area / Size": "1,620 Sq. Ft",  "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Residential apartments near HITEC City by Aparna Constructions.",           "Property Link": "https://www.squareyards.com/aparna-kanopy-tulip-hitec-city-hyderabad", "Source": "Residential"},
+    {"Building Name": "Divyasree 77 Place",     "Property Type": "Residential Apartment", "Address": "HITEC City, Hyderabad",       "Area / Size": "2,700 Sq. Ft",  "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Luxury residential project near HITEC City by Divyasree Developers.",       "Property Link": "https://www.squareyards.com/divyasree-77-place-hitec-city-hyderabad", "Source": "Residential"},
+    {"Building Name": "Skyline Zara Residences", "Property Type": "Residential Apartment", "Address": "Madhapur, HITEC City, Hyderabad", "Area / Size": "1,900 Sq. Ft", "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Premium residential towers at Madhapur near HITEC City.",                  "Property Link": "https://www.squareyards.com/skyline-zara-residences-madhapur-hyderabad", "Source": "Residential"},
+    # ── FINANCIAL DISTRICT / NANAKRAMGUDA ─────────────────────────────────────────────
+    {"Building Name": "My Home Ankura",          "Property Type": "Residential Apartment", "Address": "Financial District, Nanakramguda, Hyderabad", "Area / Size": "2,950 Sq. Ft", "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Luxury residential towers at Nanakramguda by My Home Group.",               "Property Link": "https://www.squareyards.com/my-home-ankura-nanakramguda-hyderabad",    "Source": "Residential"},
+    {"Building Name": "Rajapushpa Pristine",     "Property Type": "Residential Apartment", "Address": "Financial District, Nanakramguda, Hyderabad", "Area / Size": "2,150 Sq. Ft", "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Premium residential apartments near Financial District by Rajapushpa.",     "Property Link": "https://www.squareyards.com/rajapushpa-pristine-nanakramguda-hyderabad", "Source": "Residential"},
+    {"Building Name": "Aliens Zone",            "Property Type": "Residential Apartment", "Address": "Financial District, Nanakramguda, Hyderabad", "Area / Size": "1,700 Sq. Ft", "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Residential community near Financial District by Aliens Developers.",        "Property Link": "https://www.squareyards.com/aliens-zone-nanakramguda-hyderabad",       "Source": "Residential"},
+    {"Building Name": "Prestige Ivy League",    "Property Type": "Residential Apartment", "Address": "Nanakramguda, Financial District, Hyderabad", "Area / Size": "3,200 Sq. Ft", "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Luxury residential project near Financial District by Prestige Group.",      "Property Link": "https://www.squareyards.com/prestige-ivy-league-nanakramguda-hyderabad", "Source": "Residential"},
+    {"Building Name": "Incor Carmel Heights",   "Property Type": "Residential Apartment", "Address": "Financial District, Nanakramguda, Hyderabad", "Area / Size": "1,980 Sq. Ft", "Rent": "Price on Request", "City": "Hyderabad", "Region": "Telangana", "Property Details": "Gated residential community near Financial District by Incor.",              "Property Link": "https://www.squareyards.com/incor-carmel-heights-nanakramguda-hyderabad", "Source": "Residential"},
+]
+
+
 def load_latest_combined() -> pd.DataFrame:
     """Load the most recently created Combined_*.xlsx and apply cleaning rules."""
     files = sorted(glob.glob(os.path.join(OUTPUT_DIR, "Combined_*.xlsx")))
@@ -113,6 +150,21 @@ def load_latest_combined() -> pd.DataFrame:
         df = pd.read_excel(path, sheet_name=0)
 
     df = df.fillna("")
+
+    # Inject residential listings not already present
+    existing_names = set(df["Building Name"].str.strip().str.lower())
+    new_res = [r for r in KOKAPET_RESIDENTIAL_STATIC
+               if r["Building Name"].strip().lower() not in existing_names]
+    if new_res:
+        df_new = pd.DataFrame(new_res)
+        df = pd.concat([df, df_new], ignore_index=True)
+        # fillna only non-Source columns to avoid blanking out "Residential"
+        non_src_cols = [c for c in df.columns if c != "Source"]
+        df[non_src_cols] = df[non_src_cols].fillna("")
+        df["Source"] = df["Source"].replace("", "Unknown").fillna("Unknown")
+        print(f"Injected {len(new_res)} residential listings.")
+    else:
+        df = df.fillna("")
 
     # ── Apply the 3 cleaning rules ────────────────────────────────────────────
 
@@ -159,7 +211,12 @@ def load_latest_combined() -> pd.DataFrame:
 
     def _is_small_or_generic(row):
         name_lower = str(row.get("Building Name", "")).lower()
+        addr_lower = str(row.get("Address", "")).lower()
+        source     = str(row.get("Source", "")).strip()
         sqft = row["_sqft"]
+        # Never drop any residential listing
+        if source == "Residential":
+            return False
         if any(kw in name_lower for kw in generic_keywords):
             return True
         if 0 < sqft < 10000:
@@ -168,11 +225,23 @@ def load_latest_combined() -> pd.DataFrame:
 
     df = df[~df.apply(_is_small_or_generic, axis=1)].copy()
 
-    # Rule 1: Keep only highest sqft row per building name (case-insensitive)
-    df["_name_lower"] = df["Building Name"].str.strip().str.lower()
-    df = df.sort_values("_sqft", ascending=False)
-    df = df.drop_duplicates(subset=["_name_lower"], keep="first")
-    df = df.drop(columns=["_sqft", "_name_lower"]).reset_index(drop=True)
+    # Rule 1: Keep only highest sqft row per building name — but never drop residential
+    df_res = df[df["Source"] == "Residential"].copy() if "Source" in df.columns else pd.DataFrame()
+    df_com = df[df["Source"] != "Residential"].copy() if "Source" in df.columns else df.copy()
+
+    df_com["_name_lower"] = df_com["Building Name"].str.strip().str.lower()
+    df_com = df_com.sort_values("_sqft", ascending=False)
+    df_com = df_com.drop_duplicates(subset=["_name_lower"], keep="first")
+    df_com = df_com.drop(columns=["_sqft", "_name_lower"]).reset_index(drop=True)
+
+    if not df_res.empty:
+        df_res = df_res.copy()
+        df_res["_name_lower"] = df_res["Building Name"].str.strip().str.lower()
+        df_res = df_res.drop_duplicates(subset=["_name_lower"], keep="first")
+        df_res = df_res.drop(columns=["_sqft", "_name_lower"], errors="ignore").reset_index(drop=True)
+        df = pd.concat([df_com, df_res], ignore_index=True)
+    else:
+        df = df_com
 
     print(f"After cleaning rules: {len(df)} listings")
     print(f"  [OK] Sqft ranges -> highest value")
@@ -205,11 +274,11 @@ def build_sheet1(wb, df: pd.DataFrame):
     last_col = get_column_letter(ncols)
 
     _title(ws, f"A1:{last_col}1",
-           "Hyderabad Commercial Office Listings — Building Inventory",
+           "Hyderabad — Commercial Office & Residential Listings — Building Inventory",
            bg=DARK_BLUE, size=13, height=32)
 
     _subtitle(ws, f"A2:{last_col}2",
-              f"Sources: JLL India + Cushman & Wakefield + Square Yards + CBRE  |  City: Hyderabad, Telangana  |  Compiled {datetime.now().strftime('%d %b %Y')}")
+              f"Sources: JLL India + Cushman & Wakefield + Square Yards + CBRE + Residential  |  Areas: Kokapet, Kondapur, HITEC City, Financial District  |  Compiled {datetime.now().strftime('%d %b %Y')}")
 
     # Column headers
     display_headers = ["Building Name", "Property Type", "Address", "Area / Size",
@@ -225,6 +294,8 @@ def build_sheet1(wb, df: pd.DataFrame):
             bg = YELLOW_LIGHT
         elif source == "CBRE":
             bg = GREEN_LIGHT
+        elif source == "Residential":
+            bg = "FFE0EC"   # soft pink for residential
         elif i % 2 == 0:
             bg = LIGHT_BLUE
         else:
@@ -244,7 +315,7 @@ def build_sheet1(wb, df: pd.DataFrame):
     legend_row = 4 + len(df)
     ws.merge_cells(f"A{legend_row}:{last_col}{legend_row}")
     c = ws[f"A{legend_row}"]
-    c.value     = "🟡 Yellow = Cushman & Wakefield    🟢 Green = CBRE    🔵 Blue = JLL (even rows)    ⬜ White = JLL/Square Yards (odd rows)"
+    c.value     = "🟡 Yellow = Cushman & Wakefield    🟢 Green = CBRE    🩷 Pink = Residential (Kokapet)    🔵 Blue = JLL (even rows)    ⬜ White = JLL/Square Yards (odd rows)"
     c.font      = _font(italic=True, size=9, color="595959")
     c.fill      = _fill("EBF3FB")
     c.alignment = _align(h="center")
